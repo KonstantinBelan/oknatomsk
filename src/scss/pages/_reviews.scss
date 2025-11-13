@@ -1,11 +1,25 @@
 .heroreviews {
+  overflow: hidden;
+
+  &.animate-hero {
+    .container {
+      &::before {
+        transform: translateY(2vh) scale(0.9);
+        opacity: 0;
+      }
+    }
+  }
+
   .container {
+    overflow: visible;
+
     @include tablet {
       padding-bottom: 2rem !important;
     }
 
     &::before {
       opacity: 1;
+      transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 
       @include tablet {
         opacity: 0;

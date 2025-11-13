@@ -1,5 +1,43 @@
 // Главный JavaScript файл
 
+// Preloader functionality
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('preloader')
+
+  const minLoadingTime = 1
+
+  const startTime = Date.now()
+
+  function hidePreloader() {
+    const elapsedTime = Date.now() - startTime
+    const remainingTime = Math.max(0, minLoadingTime - elapsedTime)
+
+    setTimeout(() => {
+      preloader.classList.add('hidden')
+
+      ScrollVisibility.init()
+      ScrollVisibility.removeElement('.herohome', 'animate-hero')
+      ScrollVisibility.removeElement('.herostocks', 'animate-hero')
+      ScrollVisibility.removeElement('.heroprice', 'animate-hero')
+      ScrollVisibility.removeElement('.heroabout', 'animate-hero')
+      ScrollVisibility.removeElement('.heroreviews', 'animate-hero')
+      ScrollVisibility.removeElement('.herocontacts', 'animate-hero')
+
+      Fancybox.bind('[data-fancybox]', {})
+
+      setTimeout(() => {
+        preloader.remove()
+      }, 500)
+    }, remainingTime)
+  }
+
+  if (document.readyState === 'complete') {
+    hidePreloader()
+  } else {
+    window.addEventListener('load', hidePreloader)
+  }
+})
+
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.getElementById('burger')

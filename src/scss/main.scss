@@ -22,6 +22,7 @@
 @import 'components/forms';
 @import 'components/cards';
 @import 'components/modal';
+@import 'components/preloader';
 
 // Pages - стили для конкретных страниц
 @import 'pages/home';
@@ -34,3 +35,4 @@
 
 // Modules - сторонние модули и библиотеки
 @import 'module/slick';
+@import 'module/fancybox';

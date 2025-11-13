@@ -1,9 +1,21 @@
 // Стили для главной страницы
+.herohome {
+  &.animate-hero {
+    .container {
+      &::before {
+        transform: translateY(15vh) scale(0.9);
+        opacity: .4;
+      }
+    }
+  }
+}
+
 .hero {
   background: #EBF0FC;
   color: $color-text;
   margin-top: -75px;
   position: relative;
+  overflow: hidden;
   z-index: 1;
 
   &::after {
@@ -73,6 +85,7 @@
       bottom: 0;
       right: -100px;
       z-index: -1;
+      transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
 
       @include tablet {
         background: url('../../assets/images/hero-bg.png') bottom center no-repeat;

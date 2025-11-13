@@ -1,6 +1,22 @@
 .herostocks {
+  overflow: hidden;
+
+  &.animate-hero {
+    .container {
+      &::before {
+        transform: translateY(15vh) translateX(2vw) scale(0.9);
+        opacity: .4;
+      }
+
+      &::after {
+        transform: translateY(15vh) translateX(-2vw) scale(0.9);
+        // opacity: .4;
+      }
+    }
+  }
+
   .container {
-    overflow: hidden;
+    // overflow: hidden;
 
     @include tablet2 {
       padding-bottom: 3rem !important;
@@ -23,6 +39,7 @@
       right: -40px;
       z-index: -1;
       opacity: 1;
+      transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
 
       @include tablet2 {
         opacity: 0;
@@ -43,6 +60,7 @@
       right: 140px;
       z-index: -1;
       opacity: 1;
+      transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
 
       @include tablet2 {
         // width: 470px;

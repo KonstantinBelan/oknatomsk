@@ -1,6 +1,16 @@
 .page-about {}
 
 .heroabout {
+
+  &.animate-hero {
+    .container {
+      &::before {
+        transform: translateY(15vh) translateX(1vw) scale(0.7);
+        opacity: .4;
+      }
+    }
+  }
+
   .container {
     padding-bottom: 1.5rem;
 
@@ -16,6 +26,7 @@
       bottom: 0;
       right: -40px;
       z-index: -1;
+      transition: transform 0.9s ease-in-out, opacity 0.6s ease-in-out;
 
       @include tablet {
         opacity: 0;
