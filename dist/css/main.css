@@ -1402,6 +1402,8 @@ i {
   .hero .container, .hero .header__container {
     padding-top: 115px !important;
     padding-bottom: 310px !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 @media (max-width: 1070px) {
