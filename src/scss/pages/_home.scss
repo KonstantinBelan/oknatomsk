@@ -148,6 +148,11 @@
       max-width: 620px;
     }
 
+    mark {
+      font-weight: 600;
+      color: $color-primary;
+    }
+
     @include mobile {
       margin-bottom: $spacing-lg;
     }

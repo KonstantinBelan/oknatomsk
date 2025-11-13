@@ -49,6 +49,10 @@
   &__footer {
     margin-top: 5.75rem;
 
+    @include tablet {
+      margin-top: 2.5rem;
+    }
+
     @include mobile {
       margin-top: 1.75rem;
     }

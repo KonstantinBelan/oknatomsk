@@ -1,0 +1,30 @@
+.heroreviews {
+  .container {
+    @include tablet {
+      padding-bottom: 2rem !important;
+    }
+
+    &::before {
+      opacity: 1;
+
+      @include tablet {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.reviews {
+  &__logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  &__slider {}
+}

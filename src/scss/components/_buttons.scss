@@ -25,9 +25,55 @@
   &--primary {
     background: $bg-btn;
     color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $bg-btn-hover;
+      opacity: 0;
+      z-index: -2;
+      transition: 0.15s ease-in-out;
+    }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -30px;
+    //   width: 70px;
+    //   height: calc(100% + 60px);
+    //   background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    //   filter: blur(3px);
+    //   transform: translateX(-220%) rotate(25deg);
+    //   transition: 0.15s ease-in-out;
+    //   opacity: .7;
+    //   z-index: -1;
+    //   pointer-events: none;
+    //   animation: shine-btn 4s infinite;
+    // }
+
+    // @keyframes shine-btn {
+    //   0% {
+    //     transform: translateX(-220%) rotate(25deg);
+    //     opacity: 0.7;
+    //   }
+
+    //   100% {
+    //     transform: translateX(500%) rotate(25deg);
+    //     opacity: 0.2;
+    //   }
+    // }
 
     &:hover {
-      background: $bg-btn-hover;
+      &::after {
+        opacity: 1;
+      }
     }
   }
 
@@ -58,6 +104,34 @@
     @include mobile {
       padding: $spacing-xl/1.6 $spacing-xxl;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      width: 70px;
+      height: calc(100% + 60px);
+      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      filter: blur(3px);
+      transform: translateX(-500%) rotate(25deg);
+      transition: 0.15s ease-in-out;
+      opacity: .7;
+      z-index: -1;
+      pointer-events: none;
+      animation: shine-btn 3.5s infinite;
+    }
+
+    @keyframes shine-btn {
+      0% {
+        transform: translateX(-500%) rotate(25deg);
+        opacity: 0.7;
+      }
+
+      100% {
+        transform: translateX(500%) rotate(25deg);
+        opacity: 0.2;
+      }
+    }
   }
 
   &--small {
@@ -67,5 +141,9 @@
     @include mobile {
       padding: $spacing-md/1.2 $spacing-lg/1.2;
     }
+  }
+
+  &--full {
+    width: 100%;
   }
 }
