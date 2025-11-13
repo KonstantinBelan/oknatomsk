@@ -29,6 +29,7 @@
   &__footer {
     margin-top: $spacing-xl;
     padding-top: $spacing-xl;
+    margin-bottom: $spacing-xl+0.5;
     border-top: 1px solid rgba($color-text, 0.1);
     flex-shrink: 0;
   }
