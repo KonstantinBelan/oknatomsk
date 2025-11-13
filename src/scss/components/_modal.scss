@@ -1,0 +1,167 @@
+// Модальные окна
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: $z-index-modal;
+  @include flex-center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .modal__content {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    background-color: $color-bg;
+    border-radius: $border-radius-lg;
+    padding: $spacing-xl;
+    max-width: 550px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+    // transition-delay: 0.1s;
+  }
+
+  &__close {
+    position: absolute;
+    top: $spacing-md;
+    right: $spacing-md;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: $color-text-light;
+    @include transition(color);
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  &__header {
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 125%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: $spacing-xl;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include tablet {
+      font-size: 1.75rem;
+    }
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+
+    b,
+    strong,
+    mark {
+      font-weight: 600;
+      background: linear-gradient(90deg, #1c4ad1 0%, #5983ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__body {
+    // margin-bottom: $spacing-lg;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing-md;
+  }
+
+  form {
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+
+    input {
+      background: #f4f6fb;
+    }
+  }
+
+  &__form-checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 130%;
+    margin-top: 20px;
+    user-select: none;
+
+    input {
+      z-index: -9999;
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+
+      &:checked+label::before {
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nOScgaGVpZ2h0PSc4JyB2aWV3Qm94PScwIDAgOSA4JyBmaWxsPSdub25lJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGQ9J00wLjc1MDAxNSA0LjI1TDMuMzIyNTUgNi4zOTM3OEMzLjU1MDg4IDYuNTg0MDYgMy44OTM4IDYuNTM0MzIgNC4wNTg2NyA2LjI4NzAyTDcuNzUwMDIgMC43NScgc3Ryb2tlPScjMTcxRTRGJyBzdHJva2Utd2lkdGg9JzEuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyAvPjwvc3ZnPg==) center no-repeat;
+        background-size: 9px;
+      }
+    }
+
+    label {
+      font-size: 14px;
+      margin-left: 1rem;
+      color: #171E4F;
+      font-size: 0.9rem;
+      cursor: pointer;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border: 2px solid #171E4F;
+        border-radius: 4px;
+        display: inline-block;
+        margin-right: 8px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        background-color: transparent;
+        transition: background-color 0.3s, border-color 0.3s;
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+}

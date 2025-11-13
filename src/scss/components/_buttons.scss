@@ -1,0 +1,71 @@
+// Кнопки
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+  border-radius: 90px;
+  cursor: pointer;
+  @include transition(all);
+
+  @include mobile {
+    font-size: 1rem !important;
+  }
+
+  &:hover {
+    transform: scale(1.015);
+    // box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &--primary {
+    background: $bg-btn;
+    color: #fff;
+
+    &:hover {
+      background: $bg-btn-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+    }
+  }
+
+  &--large {
+    padding: $spacing-xl/1.2 $spacing-xxl;
+    font-size: $font-size-large;
+
+    @include mobile {
+      padding: $spacing-xl/1.6 $spacing-xxl;
+    }
+  }
+
+  &--small {
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-base;
+
+    @include mobile {
+      padding: $spacing-md/1.2 $spacing-lg/1.2;
+    }
+  }
+}

@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Главная страница" />
+    <title>Главная - Окна</title>
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo">
+          <img src="/assets/images/logo.png" width="176" height="46" alt="Ремонт окон в Томске" />
+        </a>
+        <div class="header__menu">
+          <div class="header__services-wrapper">
+            <a href="#" class="header__services">
+              <svg width="16" height="16" class="icon-menu-open" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.9541 12.0928C3.03283 12.093 3.90703 12.9672 3.90723 14.0459C3.90723 15.1248 3.03295 15.9998 1.9541 16C0.875085 16 0 15.1249 0 14.0459C0.00019945 12.9671 0.875208 12.0928 1.9541 12.0928ZM8 12.0928C9.07881 12.0929 9.95293 12.9671 9.95312 14.0459C9.95312 15.1249 9.07894 15.9999 8 16C6.92098 16 6.0459 15.1249 6.0459 14.0459C6.0461 12.9671 6.92111 12.0928 8 12.0928ZM14.0459 12.0928C15.1248 12.0928 15.9998 12.9671 16 14.0459C16 15.1249 15.1249 16 14.0459 16C12.9671 15.9998 12.0928 15.1248 12.0928 14.0459C12.093 12.9672 12.9672 12.093 14.0459 12.0928ZM1.9541 6.0459C3.03295 6.0461 3.90723 6.92111 3.90723 8C3.90723 9.07889 3.03295 9.9539 1.9541 9.9541C0.875085 9.9541 0 9.07902 0 8C1.61066e-08 6.92098 0.875085 6.0459 1.9541 6.0459ZM8 6.0459C9.07894 6.04599 9.95312 6.92104 9.95312 8C9.95312 9.07896 9.07894 9.95401 8 9.9541C6.92098 9.9541 6.0459 9.07902 6.0459 8C6.0459 6.92098 6.92098 6.0459 8 6.0459ZM14.0459 6.0459C15.1249 6.0459 16 6.92098 16 8C16 9.07902 15.1249 9.9541 14.0459 9.9541C12.9671 9.95388 12.0928 9.07888 12.0928 8C12.0928 6.92112 12.9671 6.04612 14.0459 6.0459ZM1.9541 0C3.03295 0.000199418 3.90723 0.875208 3.90723 1.9541C3.90703 3.03283 3.03283 3.90703 1.9541 3.90723C0.875208 3.90723 0.000199418 3.03295 0 1.9541C0 0.875085 0.875085 0 1.9541 0ZM8 0C9.07894 9.37816e-05 9.95312 0.875143 9.95312 1.9541C9.95293 3.03289 9.07881 3.90713 8 3.90723C6.92111 3.90723 6.0461 3.03295 6.0459 1.9541C6.0459 0.875085 6.92098 0 8 0ZM14.0459 0C15.1249 0 16 0.875085 16 1.9541C15.9998 3.03295 15.1248 3.90723 14.0459 3.90723C12.9672 3.907 12.093 3.03281 12.0928 1.9541C12.0928 0.875222 12.9671 0.000222637 14.0459 0Z" fill="#1D1D1D" />
+              </svg>
+              <svg width="16" height="16" class="icon-menu-close" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 13L13 3" stroke="#171E4F" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M3 3L13 13" stroke="#171E4F" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+              Услуги
+            </a>
+            <div class="header__services-menu">
+              <ul class="header__services-list">
+                <li class="header__services-item has-submenu">
+                  <a href="#" class="header__services-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_118_1067)"><path d="M15.4929 7.5909C15.439 7.52332 15.3736 7.5366 15.3393 7.55039C15.3106 7.56203 15.2449 7.59922 15.254 7.69242C15.2649 7.80434 15.271 7.91844 15.2722 8.0316C15.2771 8.50105 15.0888 8.96098 14.7556 9.29344C14.4245 9.62375 13.989 9.80172 13.5253 9.79656C12.892 9.78848 12.3667 9.45813 12.0061 8.84121C11.7081 8.33109 11.8391 7.67316 11.9778 6.97656C12.059 6.56883 12.1429 6.14719 12.1429 5.7459C12.1429 2.62133 10.0424 0.818672 8.79025 0.0222266C8.76435 0.00578125 8.7397 0 8.71786 0C8.68236 0 8.65423 0.0153125 8.64036 0.0246875C8.61349 0.0428906 8.57048 0.084375 8.58431 0.157813C9.0629 2.6993 7.6354 4.22785 6.12407 5.84613C4.56626 7.51422 2.8006 9.40488 2.8006 12.8147C2.8006 16.7768 6.02392 20.0001 9.98595 20.0001C13.2481 20.0001 16.1243 17.7257 16.9803 14.4692C17.564 12.2488 16.9523 9.42035 15.4929 7.5909ZM10.1652 18.4664C9.1731 18.5116 8.22958 18.1558 7.50892 17.4667C6.79599 16.785 6.38708 15.8336 6.38708 14.8565C6.38708 13.0229 7.08818 11.6768 8.97388 9.88977C9.00474 9.86051 9.03634 9.85125 9.06388 9.85125C9.08884 9.85125 9.11048 9.85887 9.12536 9.86602C9.15673 9.88113 9.20829 9.91856 9.20134 9.99949C9.13392 10.7841 9.13509 11.4353 9.20478 11.9351C9.3829 13.2119 10.3176 14.0697 11.5306 14.0697C12.1254 14.0697 12.6919 13.8459 13.1259 13.4395C13.1426 13.4234 13.1631 13.4116 13.1854 13.4052C13.2077 13.3988 13.2313 13.398 13.254 13.4029C13.2826 13.409 13.3208 13.4265 13.3409 13.4748C13.5208 13.9093 13.6127 14.3704 13.6142 14.8454C13.6199 16.7565 12.0727 18.3809 10.1652 18.4664Z" fill="#1C4AD1" /></g>
+                      <defs>
+                        <clipPath id="clip0_118_1067"><rect width="20" height="20" fill="white" /></clipPath>
+                      </defs>
+                    </svg>
+                    Популярное
+                  </a>
+                  <ul class="header__services-submenu">
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Регулировка окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Замена и ремонт комплектующих</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Утепление и герметизация</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Москитные сетки</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Откосы и подоконники</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Дополнительные услуги</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__services-item has-submenu">
+                  <a href="#" class="header__services-link">Ремонт окон и дверей</a>
+                  <ul class="header__services-submenu">
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт пластиковых окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт деревянных окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт алюминиевых окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт раздвижных окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт пластиковых дверей</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт балконной двери</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Регулировка окон</a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Замена и ремонт комплектующих </a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Утепление и гермитизация </a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Москитные сетки</a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Откосы и подоконники</a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Дополнительные услуги</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav class="header__nav">
+            <a href="pages/price.html" class="header__link">Цены</a>
+            <a href="pages/stock.html" class="header__link">Акции и скидки</a>
+            <a href="pages/about.html" class="header__link">О компании</a>
+            <a href="pages/reviews.html" class="header__link">Отзывы</a>
+            <a href="pages/contact.html" class="header__link">Контакты</a>
+          </nav>
+        </div>
+        <div class="header__contacts">
+          <a href="tel:+73822201159" class="header__tel"> +7 (3822) 20-11-59 </a>
+          <button class="btn btn--primary btn--small modal-open" data-modal-name="request">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" x="0" y="0" viewBox="0 0 480.56 480.56" style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+              <g><path d="M365.354 317.9c-15.7-15.5-35.3-15.5-50.9 0-11.9 11.8-23.8 23.6-35.5 35.6-3.2 3.3-5.9 4-9.8 1.8-7.7-4.2-15.9-7.6-23.3-12.2-34.5-21.7-63.4-49.6-89-81-12.7-15.6-24-32.3-31.9-51.1-1.6-3.8-1.3-6.3 1.8-9.4 11.9-11.5 23.5-23.3 35.2-35.1 16.3-16.4 16.3-35.6-.1-52.1-9.3-9.4-18.6-18.6-27.9-28-9.6-9.6-19.1-19.3-28.8-28.8-15.7-15.3-35.3-15.3-50.9.1-12 11.8-23.5 23.9-35.7 35.5-11.3 10.7-17 23.8-18.2 39.1-1.9 24.9 4.2 48.4 12.8 71.3 17.6 47.4 44.4 89.5 76.9 128.1 43.9 52.2 96.3 93.5 157.6 123.3 27.6 13.4 56.2 23.7 87.3 25.4 21.4 1.2 40-4.2 54.9-20.9 10.2-11.4 21.7-21.8 32.5-32.7 16-16.2 16.1-35.8.2-51.8-19-19.1-38.1-38.1-57.2-57.1zM346.254 238.2l36.9-6.3c-5.8-33.9-21.8-64.6-46.1-89-25.7-25.7-58.2-41.9-94-46.9l-5.2 37.1c27.7 3.9 52.9 16.4 72.8 36.3 18.8 18.8 31.1 42.6 35.6 68.8zM403.954 77.8c-42.6-42.6-96.5-69.5-156-77.8l-5.2 37.1c51.4 7.2 98 30.5 134.8 67.2 34.9 34.9 57.8 79 66.1 127.5l36.9-6.3c-9.7-56.2-36.2-107.2-76.6-147.7z" fill="#ffffff" opacity="1" class=""></path></g>
+            </svg>
+            <span>Заказать звонок</span>
+          </button>
+        </div>
+        <div class="header__burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav--mobile" id="mobileNav">
+      <div class="nav__header">
+        <a href="index.html" class="header__logo">
+          <img src="/assets/images/logo.png" width="176" height="46" alt="Ремонт окон в Томске" />
+        </a>
+        <button class="nav__close" id="closeMobileNav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="nav__list">
+        <!-- Подзаголовок "Услуги" -->
+        <li class="nav__subtitle">Услуги</li>
+
+        <!-- Популярное (с подменю) -->
+        <li class="nav__item has-submenu">
+          <a href="#" class="nav__link nav__link--with-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_118_1067)"><path d="M15.4929 7.5909C15.439 7.52332 15.3736 7.5366 15.3393 7.55039C15.3106 7.56203 15.2449 7.59922 15.254 7.69242C15.2649 7.80434 15.271 7.91844 15.2722 8.0316C15.2771 8.50105 15.0888 8.96098 14.7556 9.29344C14.4245 9.62375 13.989 9.80172 13.5253 9.79656C12.892 9.78848 12.3667 9.45813 12.0061 8.84121C11.7081 8.33109 11.8391 7.67316 11.9778 6.97656C12.059 6.56883 12.1429 6.14719 12.1429 5.7459C12.1429 2.62133 10.0424 0.818672 8.79025 0.0222266C8.76435 0.00578125 8.7397 0 8.71786 0C8.68236 0 8.65423 0.0153125 8.64036 0.0246875C8.61349 0.0428906 8.57048 0.084375 8.58431 0.157813C9.0629 2.6993 7.6354 4.22785 6.12407 5.84613C4.56626 7.51422 2.8006 9.40488 2.8006 12.8147C2.8006 16.7768 6.02392 20.0001 9.98595 20.0001C13.2481 20.0001 16.1243 17.7257 16.9803 14.4692C17.564 12.2488 16.9523 9.42035 15.4929 7.5909ZM10.1652 18.4664C9.1731 18.5116 8.22958 18.1558 7.50892 17.4667C6.79599 16.785 6.38708 15.8336 6.38708 14.8565C6.38708 13.0229 7.08818 11.6768 8.97388 9.88977C9.00474 9.86051 9.03634 9.85125 9.06388 9.85125C9.08884 9.85125 9.11048 9.85887 9.12536 9.86602C9.15673 9.88113 9.20829 9.91856 9.20134 9.99949C9.13392 10.7841 9.13509 11.4353 9.20478 11.9351C9.3829 13.2119 10.3176 14.0697 11.5306 14.0697C12.1254 14.0697 12.6919 13.8459 13.1259 13.4395C13.1426 13.4234 13.1631 13.4116 13.1854 13.4052C13.2077 13.3988 13.2313 13.398 13.254 13.4029C13.2826 13.409 13.3208 13.4265 13.3409 13.4748C13.5208 13.9093 13.6127 14.3704 13.6142 14.8454C13.6199 16.7565 12.0727 18.3809 10.1652 18.4664Z" fill="#1C4AD1" /></g>
+              <defs>
+                <clipPath id="clip0_118_1067"><rect width="20" height="20" fill="white" /></clipPath>
+              </defs>
+            </svg>
+            Популярное
+          </a>
+          <ul class="nav__submenu">
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Регулировка окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Замена и ремонт комплектующих</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Утепление и герметизация</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Москитные сетки</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Откосы и подоконники</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Дополнительные услуги</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Ремонт окон и дверей (с подменю) -->
+        <li class="nav__item has-submenu">
+          <a href="#" class="nav__link">Ремонт окон и дверей</a>
+          <ul class="nav__submenu">
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт пластиковых окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт деревянных окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт алюминиевых окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт раздвижных окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт пластиковых дверей</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт балконной двери</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Остальные услуги -->
+        <li class="nav__item">
+          <a href="#" class="nav__link">Регулировка окон</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Замена и ремонт комплектующих</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Утепление и герметизация</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Москитные сетки</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Откосы и подоконники</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Дополнительные услуги</a>
+        </li>
+
+        <!-- Подзаголовок "Страницы" -->
+        <li class="nav__subtitle">Страницы</li>
+
+        <!-- Существующие страницы -->
+        <li class="nav__item">
+          <a href="pages/price.html" class="nav__link">Цены</a>
+        </li>
+        <li class="nav__item">
+          <a href="pages/stock.html" class="nav__link">Акции и скидки</a>
+        </li>
+        <li class="nav__item">
+          <a href="pages/about.html" class="nav__link">О компании</a>
+        </li>
+        <li class="nav__item">
+          <a href="pages/reviews.html" class="nav__link">Отзывы</a>
+        </li>
+        <li class="nav__item">
+          <a href="pages/contact.html" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+      <div class="nav__footer">
+        <div class="nav__contacts">
+          <a href="tel:+73822201159" class="nav__tel">+7 (3822) 20-11-59</a>
+          <p class="nav__address">пр.Кирова 58 стр. 55, офис 633а</p>
+        </div>
+        <button class="btn btn--primary btn--small nav__callback modal-open" data-modal-name="request">
+          <span>Заказать звонок</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero section">
+        <div class="container">
+          <h1 class="hero__title">Ремонт окон в&nbsp;Томске <span>в&nbsp;день обращения</span></h1>
+          <ul class="hero__subtitle">
+            <li>Скидки пенсионерам и участникам СВО</li>
+            <li>Гарантия до 12 месяцев</li>
+            <li>Бесплатный выезд мастера на диагностику</li>
+          </ul>
+          <div class="hero__buttons">
+            <button class="btn btn--primary btn--large modal-open" data-modal-name="request">Вызвать мастера</button>
+            <div class="hero__stocks">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_1148)">
+                  <path d="M28.1002 11.1123L24.9634 9.97061C26.0976 9.03349 26.5818 7.54705 26.2346 6.13455C25.5523 3.35936 22.1686 2.30586 20.0309 4.19568L17.8651 6.11018L17.4367 3.23893C17.0131 0.412115 13.7404 -0.947886 11.4381 0.736489C10.2869 1.57868 9.67449 3.03049 9.94605 4.50461L6.98868 3.42824C5.53368 2.89855 3.91874 3.65155 3.38905 5.10674L2.10843 8.6253C1.93162 9.11111 2.18212 9.64836 2.66799 9.82511L17.2982 15.1501H3.17143C2.65443 15.1501 2.2353 15.5692 2.2353 16.0862V29.1917C2.2353 30.7402 3.49512 32 5.04362 32H23.7658C25.3143 32 26.5741 30.7402 26.5741 29.1917V18.5262L27.2983 18.7899C27.7819 18.966 28.3205 18.7182 28.4981 18.2304L29.7788 14.7118C30.3083 13.2566 29.5554 11.6419 28.1002 11.1123ZM11.5963 30.1278H5.04355C4.52737 30.1278 4.10743 29.7079 4.10743 29.1917V17.0223H11.5963V30.1278ZM15.3407 30.1278H13.4686V17.0223H15.3407V30.1278ZM21.2708 5.59843C22.3567 4.63836 24.0711 5.17693 24.4165 6.58161C24.7848 8.0793 23.3372 9.37793 21.8883 8.85143L18.8444 7.74349L21.2708 5.59843ZM12.5434 2.24761C13.7134 1.39174 15.3707 2.08624 15.5852 3.51655L16.0652 6.73186L13.0215 5.62405C11.5725 5.09636 11.2988 3.15799 12.5434 2.24761ZM12.9844 11.5876L4.18793 8.38593L5.14843 5.74705C5.32499 5.26199 5.8633 5.01111 6.3483 5.18755L14.2651 8.06899L12.9844 11.5876ZM16.5031 12.8684L14.7437 12.228L16.0244 8.70943L17.7837 9.3498L16.5031 12.8684ZM24.7018 29.1917C24.7018 29.7079 24.2819 30.1278 23.7657 30.1278H17.213V17.0223H22.4421L24.7019 17.8448V29.1917H24.7018ZM28.0193 14.0714L27.0589 16.7103L18.2624 13.5086L19.5431 9.99005L27.4599 12.8715C27.9449 13.0481 28.1959 13.5864 28.0193 14.0714Z" fill="#5983FF" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_1148">
+                    <rect width="32" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p><b>Бесплатная регулировка створки</b> при любом ремонте</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section class="services section pt-6 pb-6">
+        <div class="container">
+          <div class="services__grid grid grid--2">
+            <a href="#!" class="services__item" style="background: url('/assets/images/service1-img.jpg') center no-repeat; background-size: cover">
+              <p class="services__item-time">40 мин</p>
+              <div class="services__item-footer">
+                <div class="services__item-info">
+                  <p class="services__item-title">Ремонт пластиковых окон</p>
+                  <p class="services__item-desc">Устранение проблем любой сложности</p>
+                </div>
+                <div class="services__item-price">
+                  <p class="services__item-price--normal">1 200₽</p>
+                  <p class="services__item-price--best">от 900₽</p>
+                </div>
+              </div>
+            </a>
+            <a href="#!" class="services__item" style="background: url('/assets/images/service2-img.jpg') center no-repeat; background-size: cover">
+              <p class="services__item-time">15 мин</p>
+              <div class="services__item-footer">
+                <div class="services__item-info">
+                  <p class="services__item-title">Регулировка пластиковых окон</p>
+                  <p class="services__item-desc">Регулировка петель и фурнитуры</p>
+                </div>
+                <div class="services__item-price">
+                  <p class="services__item-price--best">от 500₽</p>
+                </div>
+              </div>
+            </a>
+            <a href="#!" class="services__item" style="background: url('/assets/images/service3-img.jpg') center no-repeat; background-size: cover">
+              <p class="services__item-time">10 мин</p>
+              <div class="services__item-footer">
+                <div class="services__item-info">
+                  <p class="services__item-title">Установка детских замков</p>
+                  <p class="services__item-desc">Монтаж специальных блокираторов, которые ограничивают открывание створки</p>
+                </div>
+                <div class="services__item-price">
+                  <p class="services__item-price--best">от 900₽</p>
+                </div>
+              </div>
+            </a>
+            <a href="#!" class="services__item" style="background: url('/assets/images/service4-img.jpg') center no-repeat; background-size: cover">
+              <p class="services__item-time">40 мин</p>
+              <div class="services__item-footer">
+                <div class="services__item-info">
+                  <p class="services__item-title">Сезонное обслуживание окон</p>
+                  <p class="services__item-desc">Регулировка и смазка</p>
+                </div>
+                <div class="services__item-price">
+                  <p class="services__item-price--best">от 700₽</p>
+                </div>
+              </div>
+            </a>
+            <a href="#!" class="services__item" style="background: url('/assets/images/service5-img.jpg') center no-repeat; background-size: cover">
+              <p class="services__item-time">от 1 часа</p>
+              <div class="services__item-footer">
+                <div class="services__item-info">
+                  <p class="services__item-title">Замена стеклопакета</p>
+                  <p class="services__item-desc">Включает демонтаж старого стеклопакета и установку нового с&nbsp;герметизацией по периметру.</p>
+                </div>
+                <div class="services__item-price">
+                  <p class="services__item-price--normal">4 000₽</p>
+                  <p class="services__item-price--best">от 2 500₽</p>
+                </div>
+              </div>
+            </a>
+            <a href="#!" class="services__item" style="background: url('/assets/images/service6-img.jpg') center no-repeat; background-size: cover">
+              <p class="services__item-time">30 мин</p>
+              <div class="services__item-footer">
+                <div class="services__item-info">
+                  <p class="services__item-title">Замена фурнитуры</p>
+                  <p class="services__item-desc">Полная или частичная замена ручек, петель, замков и других элементов механизма окна.</p>
+                </div>
+                <div class="services__item-price">
+                  <p class="services__item-price--best">от 2 000₽</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Problems Section -->
+      <section class="problems section pt-6 pb-6">
+        <div class="container">
+          <div class="section__header">
+            <div class="section__title">
+              <h2><mark>В 90% случаев</mark> окно можно починить</h2>
+            </div>
+            <div class="section__subtitle">
+              <p><mark>9 из 10 окон</mark> мы восстанавливаем без замены</p>
+            </div>
+          </div>
+          <div class="problems__grid grid grid--3">
+            <div class="problems__item">
+              <div class="problems__item-header">
+                <span>Проблема:</span>
+                <div class="problems__item-name">
+                  <p>Дует из окна, холодно</p>
+                </div>
+              </div>
+              <div class="problems__item-info">
+                <span>Решение:</span>
+                <ul class="problems__item-list">
+                  <li>Регулировка фурнитуры</li>
+                  <li>Замена уплотнителя</li>
+                </ul>
+                <div class="problems__item-footer">
+                  <div class="problems__item-price">
+                    <p>Цена:</p>
+                    <p><strong>от 350₽</strong></p>
+                  </div>
+                  <div class="problems__item-time">
+                    <p>Сроки:</p>
+                    <p>от 40 минут</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="problems__item">
+              <div class="problems__item-header">
+                <span>Проблема:</span>
+                <div class="problems__item-name">
+                  <p>Окно не открывается</p>
+                </div>
+              </div>
+              <div class="problems__item-info">
+                <span>Решение:</span>
+                <ul class="problems__item-list">
+                  <li>Ремонт фурнитуры</li>
+                  <li>Замена фурнитуры</li>
+                </ul>
+                <div class="problems__item-footer">
+                  <div class="problems__item-price">
+                    <p>Цена:</p>
+                    <p><strong>от 750₽</strong></p>
+                  </div>
+                  <div class="problems__item-time">
+                    <p>Сроки:</p>
+                    <p>от 1 часа</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="problems__item">
+              <div class="problems__item-header">
+                <span>Проблема:</span>
+                <div class="problems__item-name">
+                  <p>Окно заедает</p>
+                </div>
+              </div>
+              <div class="problems__item-info">
+                <span>Решение:</span>
+                <ul class="problems__item-list">
+                  <li>Ремонт фурнитуры</li>
+                  <li>Замена фурнитуры</li>
+                </ul>
+                <div class="problems__item-footer">
+                  <div class="problems__item-price">
+                    <p>Цена:</p>
+                    <p><strong>от 700₽</strong></p>
+                  </div>
+                  <div class="problems__item-time">
+                    <p>Сроки:</p>
+                    <p>от 1 часа</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="problems__item">
+              <div class="problems__item-header">
+                <span>Проблема:</span>
+                <div class="problems__item-name">
+                  <p>Конденсат, запотевание</p>
+                </div>
+              </div>
+              <div class="problems__item-info">
+                <span>Решение:</span>
+                <ul class="problems__item-list">
+                  <li>Гермитизация</li>
+                  <li>Замена стеклопакета</li>
+                </ul>
+                <div class="problems__item-footer">
+                  <div class="problems__item-price">
+                    <p>Цена:</p>
+                    <p><strong>от 600₽</strong></p>
+                  </div>
+                  <div class="problems__item-time">
+                    <p>Сроки:</p>
+                    <p>от 40 минут</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="problems__item">
+              <div class="problems__item-header">
+                <span>Проблема:</span>
+                <div class="problems__item-name">
+                  <p>Лопунул стеклопакет</p>
+                </div>
+              </div>
+              <div class="problems__item-info">
+                <span>Решение:</span>
+                <ul class="problems__item-list">
+                  <li>Замена стеклопакета</li>
+                </ul>
+                <div class="problems__item-footer">
+                  <div class="problems__item-price">
+                    <p>Цена:</p>
+                    <p><strong>от 1 800₽</strong></p>
+                  </div>
+                  <div class="problems__item-time">
+                    <p>Сроки:</p>
+                    <p>от 1.5 часа</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="problems__item">
+              <div class="problems__item-header">
+                <span>Проблема:</span>
+                <div class="problems__item-name">
+                  <p>Скрип, не держит положение</p>
+                </div>
+              </div>
+              <div class="problems__item-info">
+                <span>Решение:</span>
+                <ul class="problems__item-list">
+                  <li>Регулировка фурнитуры</li>
+                  <li>Замена фурнитуры</li>
+                </ul>
+                <div class="problems__item-footer">
+                  <div class="problems__item-price">
+                    <p>Цена:</p>
+                    <p><strong>от 350₽</strong></p>
+                  </div>
+                  <div class="problems__item-time">
+                    <p>Сроки:</p>
+                    <p>от 40 минут</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tariff Section -->
+      <section class="tariff section section--max pt-6 pb-6">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <div class="section__title">
+              <h2><mark>Проведем диагностику</mark> и&nbsp;приведем ваши окна в&nbsp;идеальное состояние</h2>
+            </div>
+            <div class="section__subtitle">
+              <p><b>Выберите подходящий уровень обслуживания</b> — от лёгкой профилактики до комплексного восстановления окон</p>
+            </div>
+          </div>
+          <div class="tariff__grid grid grid--3">
+            <div class="tariff__item">
+              <div class="tariff__item-rating">
+                <span class="tariff__item-rating--yellow"></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p class="tariff__item-title">Минимальное</p>
+              <p class="tariff__item-subtitle">Окна до 3-х лет</p>
+              <ul class="tariff__item-list">
+                <li>Регулировка</li>
+                <li>Смазка всех механизмов</li>
+                <li class="tariff__item-list--no">Замена уплотнителя</li>
+                <li class="tariff__item-list--no">Замазка щелей и швов жидким пластиком</li>
+              </ul>
+              <div class="tariff__item-price">
+                <p>Стоимость:</p>
+                <p>от 700₽</p>
+              </div>
+              <button class="btn btn--primary btn--large modal-open" data-modal-name="request" data-tariff-name="Минимальное">Вызвать мастера</button>
+            </div>
+            <div class="tariff__item">
+              <div class="tariff__item-rating">
+                <span class="tariff__item-rating--yellow"></span>
+                <span class="tariff__item-rating--yellow"></span>
+                <span></span>
+              </div>
+              <p class="tariff__item-title">Оптимальное</p>
+              <p class="tariff__item-subtitle">Окна от 3 до 7 лет</p>
+              <ul class="tariff__item-list">
+                <li>Регулировка</li>
+                <li>Смазка всех механизмов</li>
+                <li>Замена уплотнителя</li>
+                <li class="tariff__item-list--no">Замазка щелей и швов жидким пластиком</li>
+              </ul>
+              <div class="tariff__item-price">
+                <p>Стоимость:</p>
+                <p>от 1 550₽</p>
+              </div>
+              <button class="btn btn--primary btn--large modal-open" data-modal-name="request" data-tariff-name="Оптимальное">Вызвать мастера</button>
+            </div>
+            <div class="tariff__item">
+              <div class="tariff__item-rating">
+                <span class="tariff__item-rating--yellow"></span>
+                <span class="tariff__item-rating--yellow"></span>
+                <span class="tariff__item-rating--yellow"></span>
+              </div>
+              <p class="tariff__item-title">Максимальное</p>
+              <p class="tariff__item-subtitle">Окна от 7 и больше лет</p>
+              <ul class="tariff__item-list">
+                <li>Регулировка</li>
+                <li>Смазка всех механизмов</li>
+                <li>Замена уплотнителя</li>
+                <li>Замазка щелей и швов жидким пластиком</li>
+              </ul>
+              <div class="tariff__item-price">
+                <p>Стоимость:</p>
+                <p>от 1 990₽</p>
+              </div>
+              <button class="btn btn--primary btn--large modal-open" data-modal-name="request" data-tariff-name="Максимальное">Вызвать мастера</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stock Section -->
+      <section class="stocks section pt-6 pb-6">
+        <div class="container">
+          <div class="section__header section__header--jcsb">
+            <div class="section__title">
+              <h2>Акции</h2>
+            </div>
+            <div class="section__arrows">
+              <div class="section__arrows-prev"></div>
+              <div class="section__arrows-next"></div>
+            </div>
+          </div>
+          <div class="stocks__slider-wrapper">
+            <div class="stocks__slider-container">
+              <div class="stocks__slider-item">
+                <a href="#" class="modal-open" data-modal-name="request" data-stock-name="Ограничитель открывания">
+                  <img src="/assets/images/stock1.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="stocks__slider-item">
+                <a href="#" class="modal-open" data-modal-name="request" data-stock-name="Ограничитель открывания">
+                  <img src="/assets/images/stock2.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="stocks__slider-item">
+                <a href="#" class="modal-open" data-modal-name="request" data-stock-name="Ограничитель открывания">
+                  <img src="/assets/images/stock3.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="stocks__slider-item">
+                <a href="#" class="modal-open" data-modal-name="request" data-stock-name="Ограничитель открывания">
+                  <img src="/assets/images/stock1.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="stocks__slider-item">
+                <a href="#" class="modal-open" data-modal-name="request" data-stock-name="Ограничитель открывания">
+                  <img src="/assets/images/stock2.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="stocks__slider-item">
+                <a href="#" class="modal-open" data-modal-name="request" data-stock-name="Ограничитель открывания">
+                  <img src="/assets/images/stock3.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Request Section -->
+      <section class="request section section--max">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <div class="section__title">
+              <p>Оставьте заявку на бесплатную диагностику и&nbsp;забронируйте <mark>скидку&nbsp;10%</mark></p>
+            </div>
+          </div>
+          <div class="request__form">
+            <form action="" class="form grid grid--3" id="request__form">
+              <input type="text" class="form__input" name="name" id="request__name" value="" placeholder="Ваше имя" required />
+              <input type="tel" class="form__input" name="tel" id="request__tel" value="" placeholder="+ 7 000 000 00 00" required />
+              <button class="btn btn--primary btn--large">Оставить заявку</button>
+            </form>
+            <div class="request__form-checkbox">
+              <input type="checkbox" name="conf" id="conf" />
+              <label for="conf"> Я ознакомлен с политикой в отношении <a href="#" target="_blank">обработки персональных данных</a> и&nbsp;даю&nbsp;согласие на обработку. </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Steps Section -->
+      <section class="steps section section--bg">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <div class="section__title">
+              <h2>Как мы работаем</h2>
+            </div>
+          </div>
+          <div class="steps__grid">
+            <div class="steps__image">
+              <img src="/assets/images/steps-img.jpg" width="auto" height="auto" alt="Как мы работаем" />
+            </div>
+            <div class="steps__content">
+              <div class="steps__info">
+                <span>1</span>
+                <div class="steps__info-step">
+                  <div class="steps__info-icon">
+                    <img src="/assets/icons/step1-icon.svg" width="72" height="72" alt="Оставляете заявку" />
+                  </div>
+                  <div class="steps__info-text">
+                    <p class="steps__info-name">Оставляете заявку</p>
+                    <p class="steps__info-description">Заполните форму или позвоните — расскажите, в&nbsp;чём проблема.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="steps__info">
+                <span>2</span>
+                <div class="steps__info-step">
+                  <div class="steps__info-icon">
+                    <img src="/assets/icons/step2-icon.svg" width="72" height="72" alt="Мастер перезванивает" />
+                  </div>
+                  <div class="steps__info-text">
+                    <p class="steps__info-name">Мастер перезванивает</p>
+                    <p class="steps__info-description">Уточняет детали, озвучивает предварительную цену и&nbsp;время выезда.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="steps__info">
+                <span>3</span>
+                <div class="steps__info-step">
+                  <div class="steps__info-icon">
+                    <img src="/assets/icons/step3-icon.svg" width="72" height="72" alt="Приезжаем в день обращения" />
+                  </div>
+                  <div class="steps__info-text">
+                    <p class="steps__info-name">Приезжаем в день обращения</p>
+                    <p class="steps__info-description">Привозим всё с собой, проводим диагностику на месте.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="steps__info">
+                <span>4</span>
+                <div class="steps__info-step">
+                  <div class="steps__info-icon">
+                    <img src="/assets/icons/step4-icon.svg" width="72" height="72" alt="Решаем проблему на месте" />
+                  </div>
+                  <div class="steps__info-text">
+                    <p class="steps__info-name">Решаем проблему на месте</p>
+                    <p class="steps__info-description">В 90% случаев устраняем любую проблему за 1 визит.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="steps__info">
+                <span>5</span>
+                <div class="steps__info-step">
+                  <div class="steps__info-icon">
+                    <img src="/assets/icons/step5-icon.svg" width="72" height="72" alt="Гарантия и оплата" />
+                  </div>
+                  <div class="steps__info-text">
+                    <p class="steps__info-name">Гарантия и оплата</p>
+                    <p class="steps__info-description">Вы платите только за результат. Выдаём гарантию и&nbsp;чек.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews Section -->
+      <section class="reviews section pt-6 pb-6">
+        <div class="container">
+          <div class="section__header section__header--jcsb">
+            <div class="section__title">
+              <h2><mark>Отзывы</mark> наших клиентов</h2>
+            </div>
+            <div class="section__reviews">
+              <a href="#" target="_blank" title="Отзывы в 2ГИС">
+                <img src="/assets/images/reviews-2gis.jpg" width="189" height="58" alt="" />
+              </a>
+              <a href="#" target="_blank" title="Отзывы в Яндекс.Карты">
+                <img src="/assets/images/reviews-yamaps.jpg" width="187" height="58" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="reviews__slider-wrapper">
+            <div class="section__arrows-prev"></div>
+            <div class="reviews__slider-container">
+              <div class="reviews__slider-item">
+                <a href="/assets/images/reviews1.jpg">
+                  <img src="/assets/images/reviews1.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="/assets/images/reviews2.jpg">
+                  <img src="/assets/images/reviews2.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="/assets/images/reviews3.jpg">
+                  <img src="/assets/images/reviews3.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="/assets/images/reviews1.jpg">
+                  <img src="/assets/images/reviews1.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="/assets/images/reviews2.jpg">
+                  <img src="/assets/images/reviews2.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="/assets/images/reviews3.jpg">
+                  <img src="/assets/images/reviews3.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="section__arrows-next"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Price Section -->
+      <section class="price section section--bg">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <div class="section__title">
+              <h2>Цены на все услуги</h2>
+            </div>
+          </div>
+          <div class="price__wrapper">
+            <div class="price__item">
+              <div class="price__header">
+                <div class="price__title">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5 2.0498H1.5C1.36739 2.0498 1.24021 2.10248 1.14645 2.19625C1.05268 2.29002 1 2.4172 1 2.5498V29.4498C1 29.5824 1.05268 29.7096 1.14645 29.8034C1.24021 29.8971 1.36739 29.9498 1.5 29.9498H30.5C30.6326 29.9498 30.7598 29.8971 30.8536 29.8034C30.9473 29.7096 31 29.5824 31 29.4498V2.5498C31 2.4172 30.9473 2.29002 30.8536 2.19625C30.7598 2.10248 30.6326 2.0498 30.5 2.0498ZM4.415 26.4598V5.5398H14.4V26.4598H4.415ZM17.6 26.4598V5.5398H27.585V26.4598H17.6Z" fill="#A2A5B9" />
+                    <path d="M7.64401 11.9664L9.03101 10.5794C9.07876 10.5332 9.11685 10.4781 9.14306 10.4171C9.16926 10.3561 9.18306 10.2905 9.18363 10.2241C9.18421 10.1577 9.17156 10.0918 9.14642 10.0304C9.12128 9.96895 9.08415 9.91312 9.0372 9.86617C8.99026 9.81923 8.93443 9.7821 8.87298 9.75696C8.81154 9.73182 8.7457 9.71917 8.67931 9.71975C8.61292 9.72032 8.54731 9.73412 8.4863 9.76032C8.4253 9.78652 8.37013 9.82462 8.32401 9.87237L6.93701 11.2594C6.88925 11.3055 6.85116 11.3607 6.82496 11.4217C6.79875 11.4827 6.78496 11.5483 6.78438 11.6147C6.7838 11.6811 6.79646 11.7469 6.8216 11.8083C6.84674 11.8698 6.88386 11.9256 6.93081 11.9726C6.97776 12.0195 7.03358 12.0566 7.09503 12.0818C7.15648 12.1069 7.22232 12.1196 7.28871 12.119C7.3551 12.1184 7.42071 12.1046 7.48171 12.0784C7.54271 12.0522 7.59788 12.0141 7.64401 11.9664ZM10.858 10.3099L7.25001 13.9184C7.20225 13.9645 7.16416 14.0197 7.13796 14.0807C7.11175 14.1417 7.09796 14.2073 7.09738 14.2737C7.0968 14.3401 7.10946 14.4059 7.1346 14.4673C7.15974 14.5288 7.19686 14.5846 7.24381 14.6316C7.29076 14.6785 7.34658 14.7156 7.40803 14.7408C7.46948 14.7659 7.53532 14.7786 7.60171 14.778C7.6681 14.7774 7.73371 14.7636 7.79471 14.7374C7.85571 14.7112 7.91088 14.6731 7.95701 14.6254L11.5655 11.0169C11.6133 10.9707 11.6514 10.9156 11.6776 10.8546C11.7038 10.7936 11.7176 10.728 11.7181 10.6616C11.7187 10.5952 11.7061 10.5293 11.6809 10.4679C11.6558 10.4064 11.6187 10.3506 11.5717 10.3037C11.5248 10.2567 11.4689 10.2196 11.4075 10.1945C11.346 10.1693 11.2802 10.1567 11.2138 10.1572C11.1474 10.1578 11.0818 10.1716 11.0208 10.1978C10.9598 10.224 10.9041 10.2621 10.858 10.3099ZM20.85 11.9664L22.237 10.5794C22.3281 10.4851 22.3785 10.3588 22.3773 10.2277C22.3762 10.0966 22.3236 9.97117 22.2309 9.87846C22.1382 9.78576 22.0128 9.73317 21.8817 9.73203C21.7506 9.7309 21.6243 9.78129 21.53 9.87237L20.143 11.2594C20.0953 11.3055 20.0572 11.3607 20.031 11.4217C20.0048 11.4827 19.991 11.5483 19.9904 11.6147C19.9898 11.6811 20.0025 11.7469 20.0276 11.8083C20.0527 11.8698 20.0899 11.9256 20.1368 11.9726C20.1838 12.0195 20.2396 12.0566 20.301 12.0818C20.3625 12.1069 20.4283 12.1196 20.4947 12.119C20.5611 12.1184 20.6267 12.1046 20.6877 12.0784C20.7487 12.0522 20.8039 12.0141 20.85 11.9664ZM24.066 10.3099L20.457 13.9184C20.4093 13.9645 20.3712 14.0197 20.345 14.0807C20.3188 14.1417 20.305 14.2073 20.3044 14.2737C20.3038 14.3401 20.3165 14.4059 20.3416 14.4673C20.3667 14.5288 20.4039 14.5846 20.4508 14.6316C20.4978 14.6785 20.5536 14.7156 20.615 14.7408C20.6765 14.7659 20.7423 14.7786 20.8087 14.778C20.8751 14.7774 20.9407 14.7636 21.0017 14.7374C21.0627 14.7112 21.1179 14.6731 21.164 14.6254L24.773 11.0169C24.8208 10.9707 24.8589 10.9156 24.8851 10.8546C24.9113 10.7936 24.9251 10.728 24.9256 10.6616C24.9262 10.5952 24.9136 10.5293 24.8884 10.4679C24.8633 10.4064 24.8262 10.3506 24.7792 10.3037C24.7323 10.2567 24.6764 10.2196 24.615 10.1945C24.5535 10.1693 24.4877 10.1567 24.4213 10.1572C24.3549 10.1578 24.2893 10.1716 24.2283 10.1978C24.1673 10.224 24.1121 10.2621 24.066 10.3099Z" fill="#A2A5B9" />
+                  </svg>
+                  <p>Ремонт окон и дверей</p>
+                </div>
+                <div class="price__open">
+                  <p>Развернуть</p>
+                </div>
+              </div>
+              <div class="price__list">
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Ремонт пластиковых окон</p>
+                    <span>Популярное</span>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Ремонт деревянных окон</p>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Ремонт алюминиевых окон</p>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Ремонт раздвижных окон</p>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Ремонт пластиковых дверей</p>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Ремонт балконной двери</p>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="price__item">
+              <div class="price__header">
+                <div class="price__title">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_102_2316)">
+                      <path d="M3.42853 4.64614C3.50983 4.66656 3.58408 4.70863 3.64339 4.76786L10.2634 11.388L11.4613 10.1902L4.84117 3.5701C4.78182 3.51064 4.73971 3.43619 4.71932 3.35469L4.30268 1.6938L1.54064 0.114746L0.18811 1.46723L1.76763 4.23116L3.42853 4.64614Z" fill="#A2A5B9" />
+                      <path d="M9.31511 19.7469L19.82 9.24181C19.8766 9.18523 19.9468 9.14424 20.0239 9.12285C20.101 9.10145 20.1823 9.10038 20.2599 9.11972C21.643 9.47421 23.1121 9.16704 24.2378 8.2888C25.3636 7.4105 26.0185 6.05987 26.011 4.63214C26.011 4.54518 26.0084 4.45757 26.0027 4.36918L23.5594 6.81222C23.4986 6.87303 23.4221 6.9157 23.3384 6.93546C23.2547 6.95522 23.1672 6.95128 23.0856 6.92408L20.3066 5.99764C20.2384 5.975 20.1764 5.93677 20.1255 5.88598C20.0746 5.83519 20.0363 5.77323 20.0135 5.70504L19.0874 2.92601C19.0318 2.75982 19.0751 2.57616 19.1992 2.45211L21.6425 0.00890735C20.1712 -0.082631 18.7448 0.535527 17.805 1.67123C16.8654 2.80719 16.5258 4.32413 16.8913 5.75211C16.9108 5.82974 16.9098 5.91109 16.8885 5.98823C16.8671 6.06537 16.8262 6.13566 16.7696 6.19223L6.26481 16.6966C6.20802 16.7529 6.13775 16.7936 6.06071 16.815C5.98368 16.8363 5.90245 16.8376 5.8248 16.8186C5.45897 16.7245 5.08291 16.6761 4.70519 16.6745C2.71044 16.6614 0.928108 17.9189 0.271332 19.8028C-0.385078 21.6866 0.229671 23.7796 1.8007 25.0091C3.37174 26.2386 5.55104 26.3326 7.22193 25.2425C8.89293 24.1525 9.68522 22.1203 9.19279 20.1868C9.15362 20.029 9.19992 19.8618 9.31512 19.7469L9.31511 19.7469ZM5.8326 23.1589H3.57815L2.46627 21.3063L3.57815 19.4534H5.8326L6.94426 21.3063L5.8326 23.1589ZM7.62011 17.7366L17.8097 7.54683L18.4645 8.20177L8.27492 18.3915L7.62011 17.7366ZM22.2132 25.7583C23.2448 26.1462 24.4079 25.8947 25.1873 25.1153C25.9668 24.3358 26.2184 23.1725 25.8303 22.1411L22.2132 25.7583Z" fill="#A2A5B9" />
+                      <path d="M25.1875 21.138L19.9855 15.9339C19.4117 16.4162 18.5643 16.3795 18.034 15.8498C17.5036 15.3202 17.4662 14.4731 17.9477 13.8988L17.211 13.1611L13.2342 17.138L13.9754 17.8792C14.5492 17.3968 15.3966 17.4334 15.9267 17.9629C16.4571 18.4926 16.4947 19.3398 16.0131 19.9143L21.2108 25.1147C21.2675 25.1714 21.3274 25.224 21.3878 25.2751L25.348 21.3148C25.297 21.2543 25.2443 21.1947 25.1875 21.138ZM22.4414 23.0234L17.8098 18.3918L18.4647 17.7368L23.0964 22.3687L22.4414 23.0234Z" fill="#A2A5B9" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_102_2316">
+                        <rect width="26" height="26" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <p>Регулировка окон</p>
+                </div>
+                <div class="price__open">
+                  <p>Развернуть</p>
+                </div>
+              </div>
+              <div class="price__list">
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Регулировка пластиковых окон</p>
+                    <span>Популярное</span>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Регулировка деревянных окон</p>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="price__item">
+              <div class="price__header">
+                <div class="price__title">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.4643 0H12.5357C12.2894 0 12.0533 0.0978313 11.8791 0.271972C11.705 0.446113 11.6071 0.682299 11.6071 0.928571V1.85714H14.3929V0.928571C14.3929 0.682299 14.295 0.446113 14.1209 0.271972C13.9467 0.0978313 13.7106 0 13.4643 0ZM11.6071 7.89286H14.3929V12.5357H11.6071V7.89286ZM11.6071 25.0714C11.6071 25.3177 11.705 25.5539 11.8791 25.728C12.0533 25.9022 12.2894 26 12.5357 26H13.4643C13.7106 26 13.9467 25.9022 14.1209 25.728C14.295 25.5539 14.3929 25.3177 14.3929 25.0714V18.5714H11.6071V25.0714ZM11.6071 13H14.3929V18.1071H11.6071V13ZM11.6071 2.32143H14.3929V7.42857H11.6071V2.32143ZM23.2143 0.928571H16.25C16.1269 0.928571 16.0088 0.977487 15.9217 1.06456C15.8346 1.15163 15.7857 1.26972 15.7857 1.39286V7.89286H14.8571V12.5357H15.7857V18.5714H14.8571V23.6786H15.7857V24.6071C15.7857 24.7303 15.8346 24.8484 15.9217 24.9354C16.0088 25.0225 16.1269 25.0714 16.25 25.0714H23.2143C23.3374 25.0714 23.4555 25.0225 23.5426 24.9354C23.6297 24.8484 23.6786 24.7303 23.6786 24.6071V1.39286C23.6786 1.26972 23.6297 1.15163 23.5426 1.06456C23.4555 0.977487 23.3374 0.928571 23.2143 0.928571ZM19.5 22.5179C19.2704 22.5179 19.046 22.4498 18.8551 22.3222C18.6643 22.1947 18.5155 22.0134 18.4276 21.8013C18.3398 21.5892 18.3168 21.3559 18.3616 21.1307C18.4064 20.9055 18.5169 20.6987 18.6792 20.5364C18.8416 20.3741 19.0484 20.2635 19.2736 20.2187C19.4987 20.1739 19.7321 20.1969 19.9442 20.2848C20.1563 20.3726 20.3376 20.5214 20.4651 20.7123C20.5926 20.9032 20.6607 21.1276 20.6607 21.3571C20.6607 21.665 20.5384 21.9602 20.3207 22.1779C20.1031 22.3956 19.8078 22.5179 19.5 22.5179ZM19.5 14.1607C19.2704 14.1607 19.046 14.0926 18.8551 13.9651C18.6643 13.8376 18.5155 13.6563 18.4276 13.4442C18.3398 13.2321 18.3168 12.9987 18.3616 12.7736C18.4064 12.5484 18.5169 12.3416 18.6792 12.1793C18.8416 12.0169 19.0484 11.9064 19.2736 11.8616C19.4987 11.8168 19.7321 11.8398 19.9442 11.9276C20.1563 12.0155 20.3376 12.1643 20.4651 12.3551C20.5926 12.546 20.6607 12.7704 20.6607 13C20.6607 13.3078 20.5384 13.6031 20.3207 13.8207C20.1031 14.0384 19.8078 14.1607 19.5 14.1607ZM19.5 5.80357C19.2704 5.80357 19.046 5.7355 18.8551 5.60796C18.6643 5.48041 18.5155 5.29914 18.4276 5.08704C18.3398 4.87495 18.3168 4.64157 18.3616 4.41641C18.4064 4.19126 18.5169 3.98444 18.6792 3.82211C18.8416 3.65978 19.0484 3.54923 19.2736 3.50445C19.4987 3.45966 19.7321 3.48265 19.9442 3.5705C20.1563 3.65835 20.3376 3.80712 20.4651 3.998C20.5926 4.18888 20.6607 4.41329 20.6607 4.64286C20.6607 4.9507 20.5384 5.24593 20.3207 5.46361C20.1031 5.68128 19.8078 5.80357 19.5 5.80357ZM10.2143 1.39286C10.2143 1.26972 10.1654 1.15163 10.0783 1.06456C9.99123 0.977487 9.87313 0.928571 9.75 0.928571H2.78571C2.66258 0.928571 2.54448 0.977487 2.45741 1.06456C2.37034 1.15163 2.32143 1.26972 2.32143 1.39286V24.6071C2.32143 24.7303 2.37034 24.8484 2.45741 24.9354C2.54448 25.0225 2.66258 25.0714 2.78571 25.0714H9.75C9.87313 25.0714 9.99123 25.0225 10.0783 24.9354C10.1654 24.8484 10.2143 24.7303 10.2143 24.6071V18.1071H11.1429V13H10.2143V7.42857H11.1429V2.32143H10.2143V1.39286ZM6.5 22.5179C6.27043 22.5179 6.04602 22.4498 5.85514 22.3222C5.66426 22.1947 5.51549 22.0134 5.42764 21.8013C5.33979 21.5892 5.3168 21.3559 5.36159 21.1307C5.40637 20.9055 5.51692 20.6987 5.67925 20.5364C5.84158 20.3741 6.0484 20.2635 6.27355 20.2187C6.49871 20.1739 6.73209 20.1969 6.94418 20.2848C7.15628 20.3726 7.33756 20.5214 7.4651 20.7123C7.59264 20.9032 7.66071 21.1276 7.66071 21.3571C7.66071 21.5096 7.63069 21.6605 7.57236 21.8013C7.51403 21.9422 7.42853 22.0701 7.32075 22.1779C7.21296 22.2857 7.08501 22.3712 6.94418 22.4295C6.80336 22.4878 6.65243 22.5179 6.5 22.5179ZM6.5 14.1607C6.27043 14.1607 6.04602 14.0926 5.85514 13.9651C5.66426 13.8376 5.51549 13.6563 5.42764 13.4442C5.33979 13.2321 5.3168 12.9987 5.36159 12.7736C5.40637 12.5484 5.51692 12.3416 5.67925 12.1793C5.84158 12.0169 6.0484 11.9064 6.27355 11.8616C6.49871 11.8168 6.73209 11.8398 6.94418 11.9276C7.15628 12.0155 7.33756 12.1643 7.4651 12.3551C7.59264 12.546 7.66071 12.7704 7.66071 13C7.66071 13.1524 7.63069 13.3034 7.57236 13.4442C7.51403 13.585 7.42853 13.713 7.32075 13.8207C7.21296 13.9285 7.08501 14.014 6.94418 14.0724C6.80336 14.1307 6.65243 14.1607 6.5 14.1607ZM6.5 5.80357C6.27043 5.80357 6.04602 5.7355 5.85514 5.60796C5.66426 5.48041 5.51549 5.29914 5.42764 5.08704C5.33979 4.87495 5.3168 4.64157 5.36159 4.41641C5.40637 4.19126 5.51692 3.98444 5.67925 3.82211C5.84158 3.65978 6.0484 3.54923 6.27355 3.50445C6.49871 3.45966 6.73209 3.48265 6.94418 3.5705C7.15628 3.65835 7.33756 3.80712 7.4651 3.998C7.59264 4.18888 7.66071 4.41329 7.66071 4.64286C7.66071 4.79528 7.63069 4.94622 7.57236 5.08704C7.51403 5.22787 7.42853 5.35582 7.32075 5.46361C7.21296 5.57139 7.08501 5.65689 6.94418 5.71522C6.80336 5.77355 6.65243 5.80357 6.5 5.80357Z" fill="#A2A5B9" />
+                  </svg>
+                  <p>Замена и ремонт комплектующих</p>
+                </div>
+                <div class="price__open">
+                  <p>Развернуть</p>
+                </div>
+              </div>
+              <div class="price__list">
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Ремонт фурнитуры</p>
+                    <span>Популярное</span>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+                <a href="#" class="price__link">
+                  <div class="price__name">
+                    <p>Замена фурнитуры</p>
+                  </div>
+                  <div class="price__cost">
+                    <span><s>от 1 100₽</s></span>
+                    <p>от 1 100₽</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Request 2 Section -->
+      <section class="request request2 section">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <div class="section__title">
+              <p>Хотите, чтобы ваши <b>окна работали как новые</b>?</p>
+            </div>
+          </div>
+          <div class="request__form">
+            <form action="" class="form grid grid--3" id="request__form">
+              <input type="text" class="form__input" name="name" id="request__name" value="" placeholder="Ваше имя" required />
+              <input type="tel" class="form__input" name="tel" id="request__tel" value="" placeholder="+ 7 000 000 00 00" required />
+              <button class="btn btn--primary btn--large">Оставить заявку</button>
+            </form>
+            <div class="request__form-checkbox">
+              <input type="checkbox" name="conf" id="conf2" />
+              <label for="conf2"> Я ознакомлен с политикой в отношении <a href="#" target="_blank">обработки персональных данных</a> и&nbsp;даю&nbsp;согласие на обработку. </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Seo Section -->
+      <section class="seo section pt-6 pb-6">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <div class="section__title">
+              <h2>Ремонт окон в Томске</h2>
+            </div>
+          </div>
+          <div class="seo__info">
+            <p>Изготовление москитных сетокИзготовление дверных москитных сетокИзготовление оконных москитны сетокИзготовление раздвижных москитных сетокРемонт москитных сетокРемонт дверных москитных сетокРемонт оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сеток</p>
+            <p>Изготовление москитных сетокИзготовление дверных москитных сетокИзготовление оконных москитны сетокИзготовление раздвижных москитных сетокРемонт москитных сетокРемонт дверных москитных сетокРемонт оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сеток</p>
+            <p>Изготовление москитных сетокИзготовление дверных москитных сетокИзготовление оконных москитны сетокИзготовление раздвижных москитных сетокРемонт москитных сетокРемонт дверных москитных сетокРемонт оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сеток</p>
+            <p>Изготовление москитных сетокИзготовление дверных москитных сетокИзготовление оконных москитны сетокИзготовление раздвижных москитных сетокРемонт москитных сетокРемонт дверных москитных сетокРемонт оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сетокРемонт раздвижных москитных сетокЗамена москитных сетокЗамена дверных москитных сетокЗамена оконных москитны сеток</p>
+          </div>
+          <div class="seo__more">Читать далее</div>
+        </div>
+      </section>
+      <!-- Content sections will be added here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a href="index.html" class="header__logo">
+            <img src="/assets/icons/logo-footer.png" width="156" height="46" alt="Ремонт окон в Томске" />
+          </a>
+          <div class="header__menu">
+            <nav class="header__nav">
+              <a href="pages/price.html" class="header__link">Цены</a>
+              <a href="pages/stock.html" class="header__link">Акции и скидки</a>
+              <a href="pages/about.html" class="header__link">О компании</a>
+              <a href="pages/reviews.html" class="header__link">Отзывы</a>
+              <a href="pages/contact.html" class="header__link">Контакты</a>
+            </nav>
+          </div>
+          <div class="header__contacts">
+            <button class="btn btn--primary btn--small modal-open" data-modal-name="request">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" x="0" y="0" viewBox="0 0 480.56 480.56" style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                <g><path d="M365.354 317.9c-15.7-15.5-35.3-15.5-50.9 0-11.9 11.8-23.8 23.6-35.5 35.6-3.2 3.3-5.9 4-9.8 1.8-7.7-4.2-15.9-7.6-23.3-12.2-34.5-21.7-63.4-49.6-89-81-12.7-15.6-24-32.3-31.9-51.1-1.6-3.8-1.3-6.3 1.8-9.4 11.9-11.5 23.5-23.3 35.2-35.1 16.3-16.4 16.3-35.6-.1-52.1-9.3-9.4-18.6-18.6-27.9-28-9.6-9.6-19.1-19.3-28.8-28.8-15.7-15.3-35.3-15.3-50.9.1-12 11.8-23.5 23.9-35.7 35.5-11.3 10.7-17 23.8-18.2 39.1-1.9 24.9 4.2 48.4 12.8 71.3 17.6 47.4 44.4 89.5 76.9 128.1 43.9 52.2 96.3 93.5 157.6 123.3 27.6 13.4 56.2 23.7 87.3 25.4 21.4 1.2 40-4.2 54.9-20.9 10.2-11.4 21.7-21.8 32.5-32.7 16-16.2 16.1-35.8.2-51.8-19-19.1-38.1-38.1-57.2-57.1zM346.254 238.2l36.9-6.3c-5.8-33.9-21.8-64.6-46.1-89-25.7-25.7-58.2-41.9-94-46.9l-5.2 37.1c27.7 3.9 52.9 16.4 72.8 36.3 18.8 18.8 31.1 42.6 35.6 68.8zM403.954 77.8c-42.6-42.6-96.5-69.5-156-77.8l-5.2 37.1c51.4 7.2 98 30.5 134.8 67.2 34.9 34.9 57.8 79 66.1 127.5l36.9-6.3c-9.7-56.2-36.2-107.2-76.6-147.7z" fill="#ffffff" opacity="1" class=""></path></g>
+              </svg>
+              <span>Заказать звонок</span>
+            </button>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__agency">
+            <p>Разработка и продвижение:</p>
+            <a href="#" target="_blank">
+              <img src="assets/icons/agency.svg" width="158" height="27" alt="Ledoffsky Agency - Разработка и продвижение" />
+            </a>
+          </div>
+          <div class="footer__links">
+            <a href="#" target="_blank">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__contacts">
+            <a href="#" class="footer__tel" target="_blank">+7 (3822) 20-11-59</a>
+            <p class="footer__address">пр.Кирова 58 стр. 55, офис 633а</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal modal__wrapper" data-modal-name="request">
+      <div class="modal__content">
+        <button class="modal__close modal-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.0711 1.41421C19.4616 1.80474 19.4616 2.4379 19.0711 2.82843L11.8995 10L19.0711 17.1716C19.4616 17.5621 19.4616 18.1953 19.0711 18.5858C18.6805 18.9763 18.0474 18.9763 17.6568 18.5858L10.4853 11.4142L3.31371 18.5858C2.92318 18.9763 2.29002 18.9763 1.89949 18.5858C1.50896 18.1953 1.50896 17.5621 1.89949 17.1716L9.07107 10L1.89949 2.82843C1.50896 2.4379 1.50896 1.80474 1.89949 1.41421C2.29002 1.02369 2.92318 1.02369 3.31371 1.41421L10.4853 8.58579L17.6568 1.41421C18.0474 1.02369 18.6805 1.02369 19.0711 1.41421Z" fill="#121318" />
+          </svg>
+        </button>
+        <div class="modal__body">
+          <p class="modal__title"><mark>Мастер перезвонит</mark> в&nbsp;течении 15&nbsp;минут для уточнения деталей</p>
+          <form action="" class="form grid grid--1" id="modal__form">
+            <input type="text" class="form__input" name="name" id="modal__name" value="" placeholder="Ваше имя" required />
+            <input type="tel" class="form__input" name="tel" id="modal__tel" value="" placeholder="+ 7 000 000 00 00" required />
+            <button class="btn btn--primary btn--large">Жду звонка!</button>
+          </form>
+          <div class="modal__form-checkbox">
+            <input type="checkbox" name="conf" id="conf-modal" />
+            <label for="conf-modal"> Я ознакомлен с политикой в отношении <a href="#" target="_blank">обработки персональных данных</a> и&nbsp;даю&nbsp;согласие на обработку. </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu__bg"></div>
+
+    <script src="src/js/slick.min.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

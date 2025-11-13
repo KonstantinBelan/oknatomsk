@@ -1,0 +1,29 @@
+// Стили для страницы "О нас"
+.about {
+  &__intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto $spacing-xxl;
+  }
+  
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+  }
+  
+  &__feature {
+    text-align: center;
+    padding: $spacing-xl;
+    
+    &-icon {
+      font-size: 3rem;
+      color: $color-primary;
+      margin-bottom: $spacing-md;
+    }
+    
+    &-title {
+      margin-bottom: $spacing-sm;
+    }
+  }
+}

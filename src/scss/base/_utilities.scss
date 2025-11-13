@@ -1,0 +1,130 @@
+// Утилитарные классы
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @include mobile {
+    padding: 0 $spacing-md;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-sm {
+  margin-top: $spacing-sm;
+}
+
+.mt-md {
+  margin-top: $spacing-md;
+}
+
+.mt-lg {
+  margin-top: $spacing-lg;
+}
+
+.mt-xl {
+  margin-top: $spacing-xl;
+}
+
+.mb-sm {
+  margin-bottom: $spacing-sm;
+}
+
+.mb-md {
+  margin-bottom: $spacing-md;
+}
+
+.mb-lg {
+  margin-bottom: $spacing-lg;
+}
+
+.mb-xl {
+  margin-bottom: $spacing-xl;
+}
+
+.pt-sm {
+  padding-top: $spacing-sm;
+}
+
+.pt-md {
+  padding-top: $spacing-md;
+}
+
+.pt-lg {
+  padding-top: $spacing-lg;
+}
+
+.pt-xl {
+  padding-top: $spacing-xl;
+}
+
+.pt-xxl {
+  padding-top: $spacing-xxl;
+}
+
+.pt-6 {
+  padding-top: $spacing-xxl * 2;
+
+  @include mobile {
+    padding-top: $spacing-xxl * 1.15;
+  }
+}
+
+.pb-sm {
+  padding-bottom: $spacing-sm;
+}
+
+.pb-md {
+  padding-bottom: $spacing-md;
+}
+
+.pb-lg {
+  padding-bottom: $spacing-lg;
+}
+
+.pb-xl {
+  padding-bottom: $spacing-xl;
+}
+
+.pb-xxl {
+  padding-bottom: $spacing-xxl;
+}
+
+.pb-6 {
+  padding-bottom: $spacing-xxl * 2;
+
+  @include mobile {
+    padding-top: $spacing-xxl * 1.15;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-between {
+  @include flex-between;
+}

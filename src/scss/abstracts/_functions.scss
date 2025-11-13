@@ -1,0 +1,9 @@
+// Функция для конвертации px в rem
+@function rem($pixels, $context: $font-size-base) {
+  @return calc($pixels / $context) * 1rem;
+}
+
+// Функция для получения цвета с прозрачностью
+@function alpha($color, $opacity) {
+  @return rgba($color, $opacity);
+}

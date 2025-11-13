@@ -1,0 +1,96 @@
+// Типография
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section__title p {
+  font-weight: $font-weight-medium;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: 4.2rem;
+
+  @include tablet {
+    font-size: 4rem;
+  }
+
+  @include mobile {
+    font-size: 2.45rem;
+  }
+}
+
+h2,
+.section__title p {
+  font-size: 3rem;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+
+  @include mobile {
+    font-size: 1.25rem;
+  }
+}
+
+h4 {
+  font-size: 1.75rem;
+
+  @include tablet {
+    font-size: 1.1rem;
+  }
+}
+
+h5 {
+  font-size: 1.5rem;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+h6 {
+  font-size: 1.25rem;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $color-primary;
+  @include transition(color);
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+strong,
+b {
+  font-weight: $font-weight-bold;
+}
+
+em,
+i {
+  font-style: italic;
+}

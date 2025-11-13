@@ -1,0 +1,334 @@
+// Шапка сайта
+.header {
+  position: sticky;
+  top: 20px;
+  left: 20px;
+  z-index: $z-index-dropdown;
+  max-width: calc(100% - 40px);
+
+  @include mobile {
+    top: 10px;
+  }
+
+  &__container {
+    @extend .container;
+    @include flex-between;
+    gap: $spacing-xl;
+    padding: $spacing-sm*1.5;
+    max-width: 1380px;
+    background-color: $color-bg;
+    border-radius: 12px;
+    box-shadow: 0 20px 32px 0 rgba(134, 159, 221, 0.1);
+    border: 1px solid #ebf0fc;
+
+    @include mobile {
+      gap: $spacing-md;
+    }
+  }
+
+  &__menu {
+    @include flex-center;
+    gap: $spacing-lg;
+
+    @include tablet2 {
+      display: none;
+    }
+  }
+
+  &__services {
+    @include flex-center;
+    gap: $spacing-sm;
+    color: $color-text;
+    background: #ebf0fc;
+    padding: 6px 14px;
+    border-radius: 40px;
+    transition: none;
+    position: relative;
+    z-index: 1001;
+
+    svg.icon-menu-close {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-bg;
+      background: $bg-btn;
+
+      svg.icon-menu-open path {
+        fill: $color-bg;
+      }
+
+      svg.icon-menu-close path {
+        stroke: $color-bg;
+      }
+    }
+
+    &.active {
+      svg.icon-menu-open {
+        display: none;
+      }
+
+      svg.icon-menu-close {
+        display: block;
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+
+      // &:hover .header__services-menu {
+      //   opacity: 1;
+      //   visibility: visible;
+      //   transform: translateY(0);
+      // }
+    }
+
+    &-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 1.75rem;
+      padding: 1.25rem 1rem;
+      background: #ffffff;
+      box-shadow: 0 20px 32px 0 rgba(134, 159, 221, 0.1);
+      border-radius: 12px;
+      width: max-content;
+      min-width: 280px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s ease;
+      z-index: 1000;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      border-radius: 8px;
+      padding: 8px 12px;
+      position: relative;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background: #f8f9ff;
+
+        .header__services-submenu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+        }
+      }
+
+      &.has-submenu {
+        position: relative;
+
+        .header__services-link::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 7px;
+          height: 11px;
+          background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNycgaGVpZ2h0PScxMScgdmlld0JveD0nMCAwIDcgMTEnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTAuNDk5ODM4IDAuNUw1LjMxNjY5IDQuNzUwMTZDNS43Njc4NiA1LjE0ODI2IDUuNzY3ODYgNS44NTE3NSA1LjMxNjY5IDYuMjQ5ODRMMC40OTk4MzggMTAuNScgc3Ryb2tlPSdibGFjaycgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbGluZWpvaW49J3JvdW5kJyAvPjwvc3ZnPg==") center no-repeat;
+          background-size: cover;
+        }
+
+        &:hover .header__services-link::after {
+          // transform: translateY(-50%) rotate(45deg);
+        }
+      }
+
+      a {
+        color: $color-text;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #1C4AD1;
+        }
+      }
+    }
+
+    &-link {
+      width: 100%;
+      position: relative;
+      padding-right: 20px;
+
+      &:has(svg) {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 700;
+        background: linear-gradient(90deg, #1c4ad1 0%, #5983ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &-submenu {
+      position: absolute;
+      left: calc(100% + 30px);
+      top: 0;
+      background: #ffffff;
+      box-shadow: 0 20px 32px 0 rgba(134, 159, 221, 0.15);
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: max-content;
+      min-width: 250px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+      z-index: 1001;
+    }
+
+    &-subitem {
+      margin-bottom: 0.25rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-sublink {
+      color: $color-text;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: block;
+      padding: 4px 0;
+
+      &:hover {
+        color: #1C4AD1;
+      }
+    }
+  }
+
+  &__contacts {
+    @include flex-center;
+    gap: $spacing-xl;
+    min-width: fit-content;
+
+    .btn {
+      min-width: fit-content;
+
+      @include mobile {
+        @include flex-center;
+        border-radius: 90px;
+        min-width: 42px !important;
+        width: 42px !important;
+        height: 42px !important;
+        padding: 0 !important;
+      }
+
+      svg {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      span {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+
+  &__tel {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-subtitle;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: #1d1d1d;
+    min-width: fit-content;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+
+    @include mobile {
+      img {
+        max-width: 140px;
+        position: relative;
+        left: -10px;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm/2 $spacing-lg;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: $color-text;
+    font-weight: $font-weight-medium;
+    @include transition(color);
+
+    &:hover,
+    &.active {
+      color: $color-primary;
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
+    background: #EBF0FC;
+    border-radius: 10px;
+
+    @include tablet {
+      display: flex;
+    }
+
+    @include mobile {
+      min-width: 46px !important;
+      width: 46px !important;
+      height: 46px !important;
+      gap: 4px !important;
+
+      span {
+        height: 2px !important;
+      }
+    }
+
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: $color-text;
+      border-radius: 12px;
+      @include transition(all);
+    }
+  }
+}

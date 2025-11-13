@@ -1,0 +1,66 @@
+// Цвета
+$color-primary: #1C4AD1;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+$color-text: #171E4F;
+$color-text-light: #666;
+$color-bg: #fff;
+$color-bg-light: #f8f9fa;
+
+$color-title: #171E4F;
+$color-title-opacity: #8389a6;
+
+$bg-btn: linear-gradient(90deg, #1c4ad1 0%, #5983ff 100%);
+$bg-btn-hover: linear-gradient(-90deg, #1c4ad1 0%, #5983ff 100%);
+
+// Шрифты
+$font-primary: 'Noto Sans', sans-serif;
+$font-secondary: Georgia, 'Times New Roman', serif;
+
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-large: 18px;
+$font-size-subtitle: 24px;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Отступы
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// Breakpoints
+$breakpoint-mobile: 490px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1170px;
+$breakpoint-wide: 1280px;
+
+// Transitions
+$transition-speed: 0.2s;
+$transition-ease: ease-in-out;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+$shadow-btn: 0 20px 32px 0 rgba(83, 126, 255, 0.12);
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-modal: 1050;
+$z-index-tooltip: 1100;

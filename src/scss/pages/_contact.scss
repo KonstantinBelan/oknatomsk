@@ -1,0 +1,49 @@
+// Стили для страницы контактов
+.contact {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxl;
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__info {
+    h2 {
+      margin-bottom: $spacing-lg;
+    }
+  }
+  
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+    
+    &-icon {
+      font-size: 1.5rem;
+      color: $color-primary;
+      margin-top: 4px;
+    }
+    
+    &-content {
+      h3 {
+        margin-bottom: $spacing-xs;
+        font-size: 1.1rem;
+      }
+      
+      p {
+        color: $color-text-light;
+        margin: 0;
+      }
+    }
+  }
+  
+  &__form {
+    background-color: $color-bg-light;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+  }
+}

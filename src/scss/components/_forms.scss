@@ -1,0 +1,67 @@
+// Формы
+.form {
+  &__group {
+    margin-bottom: $spacing-lg;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: $spacing-sm;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    padding: $spacing-sm $spacing-xl;
+    font-size: $font-size-base;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 90px;
+    @include transition(border-color);
+    height: 74px;
+    transition: padding 0.2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+    }
+
+    &::placeholder {
+      color: $color-text;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    &:hover {
+      padding-left: $spacing-xl*1.2;
+
+      &::placeholder {
+        // color: lighten($color-text, 30%);
+        opacity: .6;
+      }
+    }
+  }
+
+  &__textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  &__error {
+    display: block;
+    margin-top: $spacing-xs;
+    font-size: $font-size-small;
+    color: $color-danger;
+  }
+
+  &__checkbox,
+  &__radio {
+    margin-right: $spacing-sm;
+  }
+}
