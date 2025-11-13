@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Главная страница" />
+    <title>О компании - Окна</title>
+    <link rel="stylesheet" href="../../dist/css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <a href="../../index.html" class="header__logo">
+          <img src="../../assets/images/logo.png" width="176" height="46" alt="Ремонт окон в Томске" />
+        </a>
+        <div class="header__menu">
+          <div class="header__services-wrapper">
+            <a href="#" class="header__services">
+              <svg width="16" height="16" class="icon-menu-open" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.9541 12.0928C3.03283 12.093 3.90703 12.9672 3.90723 14.0459C3.90723 15.1248 3.03295 15.9998 1.9541 16C0.875085 16 0 15.1249 0 14.0459C0.00019945 12.9671 0.875208 12.0928 1.9541 12.0928ZM8 12.0928C9.07881 12.0929 9.95293 12.9671 9.95312 14.0459C9.95312 15.1249 9.07894 15.9999 8 16C6.92098 16 6.0459 15.1249 6.0459 14.0459C6.0461 12.9671 6.92111 12.0928 8 12.0928ZM14.0459 12.0928C15.1248 12.0928 15.9998 12.9671 16 14.0459C16 15.1249 15.1249 16 14.0459 16C12.9671 15.9998 12.0928 15.1248 12.0928 14.0459C12.093 12.9672 12.9672 12.093 14.0459 12.0928ZM1.9541 6.0459C3.03295 6.0461 3.90723 6.92111 3.90723 8C3.90723 9.07889 3.03295 9.9539 1.9541 9.9541C0.875085 9.9541 0 9.07902 0 8C1.61066e-08 6.92098 0.875085 6.0459 1.9541 6.0459ZM8 6.0459C9.07894 6.04599 9.95312 6.92104 9.95312 8C9.95312 9.07896 9.07894 9.95401 8 9.9541C6.92098 9.9541 6.0459 9.07902 6.0459 8C6.0459 6.92098 6.92098 6.0459 8 6.0459ZM14.0459 6.0459C15.1249 6.0459 16 6.92098 16 8C16 9.07902 15.1249 9.9541 14.0459 9.9541C12.9671 9.95388 12.0928 9.07888 12.0928 8C12.0928 6.92112 12.9671 6.04612 14.0459 6.0459ZM1.9541 0C3.03295 0.000199418 3.90723 0.875208 3.90723 1.9541C3.90703 3.03283 3.03283 3.90703 1.9541 3.90723C0.875208 3.90723 0.000199418 3.03295 0 1.9541C0 0.875085 0.875085 0 1.9541 0ZM8 0C9.07894 9.37816e-05 9.95312 0.875143 9.95312 1.9541C9.95293 3.03289 9.07881 3.90713 8 3.90723C6.92111 3.90723 6.0461 3.03295 6.0459 1.9541C6.0459 0.875085 6.92098 0 8 0ZM14.0459 0C15.1249 0 16 0.875085 16 1.9541C15.9998 3.03295 15.1248 3.90723 14.0459 3.90723C12.9672 3.907 12.093 3.03281 12.0928 1.9541C12.0928 0.875222 12.9671 0.000222637 14.0459 0Z" fill="#1D1D1D" />
+              </svg>
+              <svg width="16" height="16" class="icon-menu-close" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 13L13 3" stroke="#171E4F" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M3 3L13 13" stroke="#171E4F" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+              Услуги
+            </a>
+            <div class="header__services-menu">
+              <ul class="header__services-list">
+                <li class="header__services-item has-submenu">
+                  <a href="#" class="header__services-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_118_1067)"><path d="M15.4929 7.5909C15.439 7.52332 15.3736 7.5366 15.3393 7.55039C15.3106 7.56203 15.2449 7.59922 15.254 7.69242C15.2649 7.80434 15.271 7.91844 15.2722 8.0316C15.2771 8.50105 15.0888 8.96098 14.7556 9.29344C14.4245 9.62375 13.989 9.80172 13.5253 9.79656C12.892 9.78848 12.3667 9.45813 12.0061 8.84121C11.7081 8.33109 11.8391 7.67316 11.9778 6.97656C12.059 6.56883 12.1429 6.14719 12.1429 5.7459C12.1429 2.62133 10.0424 0.818672 8.79025 0.0222266C8.76435 0.00578125 8.7397 0 8.71786 0C8.68236 0 8.65423 0.0153125 8.64036 0.0246875C8.61349 0.0428906 8.57048 0.084375 8.58431 0.157813C9.0629 2.6993 7.6354 4.22785 6.12407 5.84613C4.56626 7.51422 2.8006 9.40488 2.8006 12.8147C2.8006 16.7768 6.02392 20.0001 9.98595 20.0001C13.2481 20.0001 16.1243 17.7257 16.9803 14.4692C17.564 12.2488 16.9523 9.42035 15.4929 7.5909ZM10.1652 18.4664C9.1731 18.5116 8.22958 18.1558 7.50892 17.4667C6.79599 16.785 6.38708 15.8336 6.38708 14.8565C6.38708 13.0229 7.08818 11.6768 8.97388 9.88977C9.00474 9.86051 9.03634 9.85125 9.06388 9.85125C9.08884 9.85125 9.11048 9.85887 9.12536 9.86602C9.15673 9.88113 9.20829 9.91856 9.20134 9.99949C9.13392 10.7841 9.13509 11.4353 9.20478 11.9351C9.3829 13.2119 10.3176 14.0697 11.5306 14.0697C12.1254 14.0697 12.6919 13.8459 13.1259 13.4395C13.1426 13.4234 13.1631 13.4116 13.1854 13.4052C13.2077 13.3988 13.2313 13.398 13.254 13.4029C13.2826 13.409 13.3208 13.4265 13.3409 13.4748C13.5208 13.9093 13.6127 14.3704 13.6142 14.8454C13.6199 16.7565 12.0727 18.3809 10.1652 18.4664Z" fill="#1C4AD1" /></g>
+                      <defs>
+                        <clipPath id="clip0_118_1067"><rect width="20" height="20" fill="white" /></clipPath>
+                      </defs>
+                    </svg>
+                    Популярное
+                  </a>
+                  <ul class="header__services-submenu">
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Регулировка окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Замена и ремонт комплектующих</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Утепление и герметизация</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Москитные сетки</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Откосы и подоконники</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Дополнительные услуги</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__services-item has-submenu">
+                  <a href="#" class="header__services-link">Ремонт окон и дверей</a>
+                  <ul class="header__services-submenu">
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт пластиковых окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт деревянных окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт алюминиевых окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт раздвижных окон</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт пластиковых дверей</a>
+                    </li>
+                    <li class="header__services-subitem">
+                      <a href="#" class="header__services-sublink">Ремонт балконной двери</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Регулировка окон</a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Замена и ремонт комплектующих </a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Утепление и гермитизация </a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Москитные сетки</a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Откосы и подоконники</a>
+                </li>
+
+                <li class="header__services-item">
+                  <a href="#" class="header__services-link">Дополнительные услуги</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav class="header__nav">
+            <a href="../../pages/price.html" class="header__link">Цены</a>
+            <a href="../../pages/stock.html" class="header__link">Акции и скидки</a>
+            <a href="../../pages/about.html" class="header__link header__link--active">О компании</a>
+            <a href="../../pages/reviews.html" class="header__link">Отзывы</a>
+            <a href="../../pages/contact.html" class="header__link">Контакты</a>
+          </nav>
+        </div>
+        <div class="header__contacts">
+          <a href="tel:+73822201159" class="header__tel"> +7 (3822) 20-11-59 </a>
+          <button class="btn btn--primary btn--small modal-open" data-modal-name="request">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" x="0" y="0" viewBox="0 0 480.56 480.56" style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+              <g><path d="M365.354 317.9c-15.7-15.5-35.3-15.5-50.9 0-11.9 11.8-23.8 23.6-35.5 35.6-3.2 3.3-5.9 4-9.8 1.8-7.7-4.2-15.9-7.6-23.3-12.2-34.5-21.7-63.4-49.6-89-81-12.7-15.6-24-32.3-31.9-51.1-1.6-3.8-1.3-6.3 1.8-9.4 11.9-11.5 23.5-23.3 35.2-35.1 16.3-16.4 16.3-35.6-.1-52.1-9.3-9.4-18.6-18.6-27.9-28-9.6-9.6-19.1-19.3-28.8-28.8-15.7-15.3-35.3-15.3-50.9.1-12 11.8-23.5 23.9-35.7 35.5-11.3 10.7-17 23.8-18.2 39.1-1.9 24.9 4.2 48.4 12.8 71.3 17.6 47.4 44.4 89.5 76.9 128.1 43.9 52.2 96.3 93.5 157.6 123.3 27.6 13.4 56.2 23.7 87.3 25.4 21.4 1.2 40-4.2 54.9-20.9 10.2-11.4 21.7-21.8 32.5-32.7 16-16.2 16.1-35.8.2-51.8-19-19.1-38.1-38.1-57.2-57.1zM346.254 238.2l36.9-6.3c-5.8-33.9-21.8-64.6-46.1-89-25.7-25.7-58.2-41.9-94-46.9l-5.2 37.1c27.7 3.9 52.9 16.4 72.8 36.3 18.8 18.8 31.1 42.6 35.6 68.8zM403.954 77.8c-42.6-42.6-96.5-69.5-156-77.8l-5.2 37.1c51.4 7.2 98 30.5 134.8 67.2 34.9 34.9 57.8 79 66.1 127.5l36.9-6.3c-9.7-56.2-36.2-107.2-76.6-147.7z" fill="#ffffff" opacity="1" class=""></path></g>
+            </svg>
+            <span>Заказать звонок</span>
+          </button>
+        </div>
+        <div class="header__burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav--mobile" id="mobileNav">
+      <div class="nav__header">
+        <a href="../../index.html" class="header__logo">
+          <img src="../../assets/images/logo.png" width="176" height="46" alt="Ремонт окон в Томске" />
+        </a>
+        <button class="nav__close" id="closeMobileNav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="nav__list">
+        <!-- Подзаголовок "Услуги" -->
+        <li class="nav__subtitle">Услуги</li>
+
+        <!-- Популярное (с подменю) -->
+        <li class="nav__item has-submenu">
+          <a href="#" class="nav__link nav__link--with-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_118_1067)"><path d="M15.4929 7.5909C15.439 7.52332 15.3736 7.5366 15.3393 7.55039C15.3106 7.56203 15.2449 7.59922 15.254 7.69242C15.2649 7.80434 15.271 7.91844 15.2722 8.0316C15.2771 8.50105 15.0888 8.96098 14.7556 9.29344C14.4245 9.62375 13.989 9.80172 13.5253 9.79656C12.892 9.78848 12.3667 9.45813 12.0061 8.84121C11.7081 8.33109 11.8391 7.67316 11.9778 6.97656C12.059 6.56883 12.1429 6.14719 12.1429 5.7459C12.1429 2.62133 10.0424 0.818672 8.79025 0.0222266C8.76435 0.00578125 8.7397 0 8.71786 0C8.68236 0 8.65423 0.0153125 8.64036 0.0246875C8.61349 0.0428906 8.57048 0.084375 8.58431 0.157813C9.0629 2.6993 7.6354 4.22785 6.12407 5.84613C4.56626 7.51422 2.8006 9.40488 2.8006 12.8147C2.8006 16.7768 6.02392 20.0001 9.98595 20.0001C13.2481 20.0001 16.1243 17.7257 16.9803 14.4692C17.564 12.2488 16.9523 9.42035 15.4929 7.5909ZM10.1652 18.4664C9.1731 18.5116 8.22958 18.1558 7.50892 17.4667C6.79599 16.785 6.38708 15.8336 6.38708 14.8565C6.38708 13.0229 7.08818 11.6768 8.97388 9.88977C9.00474 9.86051 9.03634 9.85125 9.06388 9.85125C9.08884 9.85125 9.11048 9.85887 9.12536 9.86602C9.15673 9.88113 9.20829 9.91856 9.20134 9.99949C9.13392 10.7841 9.13509 11.4353 9.20478 11.9351C9.3829 13.2119 10.3176 14.0697 11.5306 14.0697C12.1254 14.0697 12.6919 13.8459 13.1259 13.4395C13.1426 13.4234 13.1631 13.4116 13.1854 13.4052C13.2077 13.3988 13.2313 13.398 13.254 13.4029C13.2826 13.409 13.3208 13.4265 13.3409 13.4748C13.5208 13.9093 13.6127 14.3704 13.6142 14.8454C13.6199 16.7565 12.0727 18.3809 10.1652 18.4664Z" fill="#1C4AD1" /></g>
+              <defs>
+                <clipPath id="clip0_118_1067"><rect width="20" height="20" fill="white" /></clipPath>
+              </defs>
+            </svg>
+            Популярное
+          </a>
+          <ul class="nav__submenu">
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Регулировка окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Замена и ремонт комплектующих</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Утепление и герметизация</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Москитные сетки</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Откосы и подоконники</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Дополнительные услуги</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Ремонт окон и дверей (с подменю) -->
+        <li class="nav__item has-submenu">
+          <a href="#" class="nav__link">Ремонт окон и дверей</a>
+          <ul class="nav__submenu">
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт пластиковых окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт деревянных окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт алюминиевых окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт раздвижных окон</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт пластиковых дверей</a>
+            </li>
+            <li class="nav__subitem">
+              <a href="#" class="nav__sublink">Ремонт балконной двери</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Остальные услуги -->
+        <li class="nav__item">
+          <a href="#" class="nav__link">Регулировка окон</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Замена и ремонт комплектующих</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Утепление и герметизация</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Москитные сетки</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Откосы и подоконники</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Дополнительные услуги</a>
+        </li>
+
+        <!-- Подзаголовок "Страницы" -->
+        <li class="nav__subtitle">Страницы</li>
+
+        <!-- Существующие страницы -->
+        <li class="nav__item">
+          <a href="../../pages/price.html" class="nav__link">Цены</a>
+        </li>
+        <li class="nav__item">
+          <a href="../../pages/stock.html" class="nav__link">Акции и скидки</a>
+        </li>
+        <li class="nav__item">
+          <a href="../../pages/about.html" class="nav__link">О компании</a>
+        </li>
+        <li class="nav__item">
+          <a href="../../pages/reviews.html" class="nav__link">Отзывы</a>
+        </li>
+        <li class="nav__item">
+          <a href="../../pages/contact.html" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+      <div class="nav__footer">
+        <div class="nav__contacts">
+          <a href="tel:+73822201159" class="nav__tel">+7 (3822) 20-11-59</a>
+          <p class="nav__address">пр.Кирова 58 стр. 55, офис 633а</p>
+        </div>
+        <button class="btn btn--primary btn--small nav__callback modal-open" data-modal-name="request">
+          <span>Заказать звонок</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-about">
+      <!-- Hero Page Section -->
+      <section class="hero heropage heroabout section">
+        <div class="container">
+          <h1 class="hero__title hero__title--max100">О компании<br /><span>ремонтокон-томск.рф</span></h1>
+          <div class="hero__subtitle hero__subtitle--max620">
+            <p><b>10+ лет помогаем жителям Томска</b> продлить срок службы пластиковых, деревянных и алюминиевых окон</p>
+          </div>
+          <div class="hero__footer">
+            <div class="hero__privilege grid grid--4">
+              <div class="hero__privilege-item">
+                <img src="../../assets/icons/privilege-1.svg" width="64" height="64" alt="" />
+                <p><b>200 положительных отзывов</b> на независимых площадках</p>
+              </div>
+              <div class="hero__privilege-item">
+                <img src="../../assets/icons/privilege-2.svg" width="64" height="64" alt="" />
+                <p><b>Более 3 000 отремонтированных окон</b>&nbsp;в&nbsp;Томске</p>
+              </div>
+              <div class="hero__privilege-item">
+                <img src="../../assets/icons/privilege-3.svg" width="64" height="64" alt="" />
+                <p>Выезжаем <b>в&nbsp;день обращения</b></p>
+              </div>
+              <div class="hero__privilege-item">
+                <img src="../../assets/icons/privilege-4.svg" width="64" height="64" alt="" />
+                <p>Честные <b>фиксированные цены</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Principles Section -->
+      <section class="principles section pt-6 pb-6">
+        <div class="container">
+          <div class="section__header section__header--jcsb">
+            <div class="section__title">
+              <h2><mark>Принципы</mark> нашей работы</h2>
+            </div>
+          </div>
+          <div class="principles__grid grid grid--3">
+            <div class="principles__item">
+              <div class="principles__item-icon">
+                <img src="../../assets/icons/principles-1.svg" width="64" height="64" alt="Прозрачные цены" />
+              </div>
+              <div class="principles__item-info">
+                <p class="principles__item-title">Прозрачные цены</p>
+                <p class="principles__item-description">Сразу называем стоимость работ — никаких скрытых доплат.</p>
+              </div>
+            </div>
+            <div class="principles__item">
+              <div class="principles__item-icon">
+                <img src="../../assets/icons/principles-2.svg" width="64" height="64" alt="Качество и гарантии" />
+              </div>
+              <div class="principles__item-info">
+                <p class="principles__item-title">Качество и гарантии</p>
+                <p class="principles__item-description">Используем сертифицированные комплектующие и даём гарантию до&nbsp;2 лет.</p>
+              </div>
+            </div>
+            <div class="principles__item">
+              <div class="principles__item-icon">
+                <img src="../../assets/icons/principles-3.svg" width="64" height="64" alt="Вежливость и аккуратность" />
+              </div>
+              <div class="principles__item-info">
+                <p class="principles__item-title">Вежливость и&nbsp;аккуратность</p>
+                <p class="principles__item-description">Бережём ваш дом и нервы — работаем чисто и без спешки.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews Section -->
+      <section class="reviews section pt-6 pb-6">
+        <div class="container">
+          <div class="section__header section__header--jcsb">
+            <div class="section__title">
+              <h2><mark>Отзывы</mark> наших клиентов</h2>
+            </div>
+            <div class="section__reviews">
+              <a href="#" target="_blank" title="Отзывы в 2ГИС">
+                <img src="../../assets/images/reviews-2gis.jpg" width="189" height="58" alt="" />
+              </a>
+              <a href="#" target="_blank" title="Отзывы в Яндекс.Карты">
+                <img src="../../assets/images/reviews-yamaps.jpg" width="187" height="58" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="reviews__slider-wrapper">
+            <div class="section__arrows-prev"></div>
+            <div class="reviews__slider-container">
+              <div class="reviews__slider-item">
+                <a href="assets/images/reviews1.jpg">
+                  <img src="../../assets/images/reviews1.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="assets/images/reviews2.jpg">
+                  <img src="../../assets/images/reviews2.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="assets/images/reviews3.jpg">
+                  <img src="../../assets/images/reviews3.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="assets/images/reviews1.jpg">
+                  <img src="../../assets/images/reviews1.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="assets/images/reviews2.jpg">
+                  <img src="../../assets/images/reviews2.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+              <div class="reviews__slider-item">
+                <a href="assets/images/reviews3.jpg">
+                  <img src="../../assets/images/reviews3.jpg" width="auto" height="auto" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="section__arrows-next"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Request 2 Section -->
+      <section class="request request2 section">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <div class="section__title">
+              <p>Хотите, чтобы ваши <b>окна работали как новые</b>?</p>
+            </div>
+          </div>
+          <div class="request__form">
+            <form action="" class="form grid grid--3" id="request__form">
+              <input type="text" class="form__input" name="name" id="request__name" value="" placeholder="Ваше имя" required />
+              <input type="tel" class="form__input" name="tel" id="request__tel" value="" placeholder="+ 7 000 000 00 00" required />
+              <button class="btn btn--primary btn--large">Оставить заявку</button>
+            </form>
+            <div class="request__form-checkbox">
+              <input type="checkbox" name="conf" id="conf2" />
+              <label for="conf2"> Я ознакомлен с политикой в отношении <a href="#" target="_blank">обработки персональных данных</a> и&nbsp;даю&nbsp;согласие на обработку. </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="maps section">
+        <div class="maps__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A56cf521170184057ba4332da12ea430943e8eb70a33640611b704f34953b520b&amp;source=constructor" width="100%" height="620" frameborder="0"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a href="../../index.html" class="header__logo">
+            <img src="../../assets/icons/logo-footer.png" width="156" height="46" alt="Ремонт окон в Томске" />
+          </a>
+          <div class="header__menu">
+            <nav class="header__nav">
+              <a href="../../pages/price.html" class="header__link">Цены</a>
+              <a href="../../pages/stock.html" class="header__link">Акции и скидки</a>
+              <a href="../../pages/about.html" class="header__link">О компании</a>
+              <a href="../../pages/reviews.html" class="header__link">Отзывы</a>
+              <a href="../../pages/contact.html" class="header__link">Контакты</a>
+            </nav>
+          </div>
+          <div class="header__contacts">
+            <button class="btn btn--primary btn--small modal-open" data-modal-name="request">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" x="0" y="0" viewBox="0 0 480.56 480.56" style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                <g><path d="M365.354 317.9c-15.7-15.5-35.3-15.5-50.9 0-11.9 11.8-23.8 23.6-35.5 35.6-3.2 3.3-5.9 4-9.8 1.8-7.7-4.2-15.9-7.6-23.3-12.2-34.5-21.7-63.4-49.6-89-81-12.7-15.6-24-32.3-31.9-51.1-1.6-3.8-1.3-6.3 1.8-9.4 11.9-11.5 23.5-23.3 35.2-35.1 16.3-16.4 16.3-35.6-.1-52.1-9.3-9.4-18.6-18.6-27.9-28-9.6-9.6-19.1-19.3-28.8-28.8-15.7-15.3-35.3-15.3-50.9.1-12 11.8-23.5 23.9-35.7 35.5-11.3 10.7-17 23.8-18.2 39.1-1.9 24.9 4.2 48.4 12.8 71.3 17.6 47.4 44.4 89.5 76.9 128.1 43.9 52.2 96.3 93.5 157.6 123.3 27.6 13.4 56.2 23.7 87.3 25.4 21.4 1.2 40-4.2 54.9-20.9 10.2-11.4 21.7-21.8 32.5-32.7 16-16.2 16.1-35.8.2-51.8-19-19.1-38.1-38.1-57.2-57.1zM346.254 238.2l36.9-6.3c-5.8-33.9-21.8-64.6-46.1-89-25.7-25.7-58.2-41.9-94-46.9l-5.2 37.1c27.7 3.9 52.9 16.4 72.8 36.3 18.8 18.8 31.1 42.6 35.6 68.8zM403.954 77.8c-42.6-42.6-96.5-69.5-156-77.8l-5.2 37.1c51.4 7.2 98 30.5 134.8 67.2 34.9 34.9 57.8 79 66.1 127.5l36.9-6.3c-9.7-56.2-36.2-107.2-76.6-147.7z" fill="#ffffff" opacity="1" class=""></path></g>
+              </svg>
+              <span>Заказать звонок</span>
+            </button>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__agency">
+            <p>Разработка и продвижение:</p>
+            <a href="#" target="_blank">
+              <img src="../../assets/icons/agency.svg" width="158" height="27" alt="Ledoffsky Agency - Разработка и продвижение" />
+            </a>
+          </div>
+          <div class="footer__links">
+            <a href="#" target="_blank">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__contacts">
+            <a href="#" class="footer__tel" target="_blank">+7 (3822) 20-11-59</a>
+            <p class="footer__address">пр.Кирова 58 стр. 55, офис 633а</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal modal__wrapper" data-modal-name="request">
+      <div class="modal__content">
+        <button class="modal__close modal-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.0711 1.41421C19.4616 1.80474 19.4616 2.4379 19.0711 2.82843L11.8995 10L19.0711 17.1716C19.4616 17.5621 19.4616 18.1953 19.0711 18.5858C18.6805 18.9763 18.0474 18.9763 17.6568 18.5858L10.4853 11.4142L3.31371 18.5858C2.92318 18.9763 2.29002 18.9763 1.89949 18.5858C1.50896 18.1953 1.50896 17.5621 1.89949 17.1716L9.07107 10L1.89949 2.82843C1.50896 2.4379 1.50896 1.80474 1.89949 1.41421C2.29002 1.02369 2.92318 1.02369 3.31371 1.41421L10.4853 8.58579L17.6568 1.41421C18.0474 1.02369 18.6805 1.02369 19.0711 1.41421Z" fill="#121318" />
+          </svg>
+        </button>
+        <div class="modal__body">
+          <p class="modal__title"><mark>Мастер перезвонит</mark> в&nbsp;течении 15&nbsp;минут для уточнения деталей</p>
+          <form action="" class="form grid grid--1" id="modal__form">
+            <input type="text" class="form__input" name="name" id="modal__name" value="" placeholder="Ваше имя" required />
+            <input type="tel" class="form__input" name="tel" id="modal__tel" value="" placeholder="+ 7 000 000 00 00" required />
+            <button class="btn btn--primary btn--large">Жду звонка!</button>
+          </form>
+          <div class="modal__form-checkbox">
+            <input type="checkbox" name="conf" id="conf-modal" />
+            <label for="conf-modal"> Я ознакомлен с политикой в отношении <a href="#" target="_blank">обработки персональных данных</a> и&nbsp;даю&nbsp;согласие на обработку. </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu__bg"></div>
+
+    <script src="../../src/js/slick.min.js"></script>
+    <script src="../../src/js/main.js"></script>
+  </body>
+</html>

@@ -117,6 +117,10 @@
     max-width: 570px;
     line-height: 1.1;
 
+    &--max100 {
+      max-width: 100%;
+    }
+
     @include mobile {
       margin-bottom: $spacing-lg;
     }
@@ -139,6 +143,10 @@
     font-size: $font-size-base+1;
     margin-bottom: $spacing-xl;
     opacity: 0.9;
+
+    &--max620 {
+      max-width: 620px;
+    }
 
     @include mobile {
       margin-bottom: $spacing-lg;
@@ -169,6 +177,20 @@
         background: linear-gradient(90deg, #5983ff 0%, #1c4ad1 100%);
         border: 1px solid rgba(255, 255, 255, 0.8);
         border-radius: 100%;
+      }
+    }
+
+    &:has(>p) {
+      margin-bottom: 0;
+
+      p {
+        font-size: 1.15rem;
+        padding: 0;
+        margin: 0;
+
+        @include mobile {
+          font-size: 1rem
+        }
       }
     }
   }
@@ -753,6 +775,8 @@
 
   &.section--max {
     max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &::after {
@@ -792,6 +816,10 @@
     max-width: 620px;
     margin-bottom: 32px;
     color: #fff;
+
+    &--760 {
+      max-width: 760px;
+    }
 
     @include tablet {
       max-width: 550px !important;

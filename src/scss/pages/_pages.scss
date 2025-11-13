@@ -1,0 +1,93 @@
+.heropage {
+  background: #EBF0FC;
+
+  &::after {
+    // display: none;
+  }
+
+  .container {
+    @include mobile {
+      padding-bottom: 240px !important;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include mobile {
+
+    .hero__title,
+    .hero__subtitle {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.price2 {
+
+  .price__list,
+  .price__name span,
+  .price__cost p,
+  .price__header {
+    background: #eff3fd;
+  }
+
+  .price__link {
+    background: #ffffff;
+  }
+
+  .price__cost span {
+    opacity: .7;
+  }
+}
+
+.hero {
+
+  &__footer {
+    margin-top: 5.75rem;
+
+    @include mobile {
+      margin-top: 1.75rem;
+    }
+  }
+
+  &__privilege {
+    gap: 12px;
+
+    @include mobile {
+      gap: 6px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.8);
+
+      img {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      padding: 0;
+      margin: 0;
+      line-height: 1.4;
+
+      b,
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+}
