@@ -740,7 +740,7 @@ i {
 .nav__footer {
   margin-top: 2rem;
   padding-top: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   border-top: 1px solid rgba(23, 30, 79, 0.1);
   flex-shrink: 0;
 }
@@ -815,9 +815,10 @@ i {
   height: 11px;
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNycgaGVpZ2h0PScxMScgdmlld0JveD0nMCAwIDcgMTEnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTAuNDk5ODM4IDAuNUw1LjMxNjY5IDQuNzUwMTZDNS43Njc4NiA1LjE0ODI2IDUuNzY3ODYgNS44NTE3NSA1LjMxNjY5IDYuMjQ5ODRMMC40OTk4MzggMTAuNScgc3Ryb2tlPSdibGFjaycgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbGluZWpvaW49J3JvdW5kJyAvPjwvc3ZnPg==) center no-repeat;
   background-size: cover;
+  transform: rotate(90deg);
 }
 .nav__item.has-submenu:has(> .nav__submenu.active) a::after {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 .nav__link {
   display: flex;
@@ -1547,7 +1548,7 @@ i {
     border: 1px solid rgba(255, 255, 255, 0.85);
     position: absolute;
     bottom: 15px;
-    width: calc(100% - 32px);
+    width: calc(100% - 64px);
     max-width: 100%;
   }
   .hero__stocks p {

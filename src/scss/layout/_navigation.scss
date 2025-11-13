@@ -29,7 +29,7 @@
   &__footer {
     margin-top: $spacing-xl;
     padding-top: $spacing-xl;
-    margin-bottom: $spacing-xl+0.5;
+    margin-bottom: $spacing-xxl;
     border-top: 1px solid rgba($color-text, 0.1);
     flex-shrink: 0;
   }
@@ -118,13 +118,14 @@
           height: 11px;
           background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNycgaGVpZ2h0PScxMScgdmlld0JveD0nMCAwIDcgMTEnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTAuNDk5ODM4IDAuNUw1LjMxNjY5IDQuNzUwMTZDNS43Njc4NiA1LjE0ODI2IDUuNzY3ODYgNS44NTE3NSA1LjMxNjY5IDYuMjQ5ODRMMC40OTk4MzggMTAuNScgc3Ryb2tlPSdibGFjaycgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbGluZWpvaW49J3JvdW5kJyAvPjwvc3ZnPg==) center no-repeat;
           background-size: cover;
+          transform: rotate(90deg);
         }
       }
 
       &:has(>.nav__submenu.active) {
         a {
           &::after {
-            transform: rotate(90deg);
+            transform: rotate(-90deg);
           }
         }
       }

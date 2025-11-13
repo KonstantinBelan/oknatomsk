@@ -10,12 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMobileMenu = () => {
     mobileNav.classList.remove('active')
     burger.classList.remove('active')
+    document.body.style.overflow = ''
   }
 
   if (burger && mobileNav) {
     burger.addEventListener('click', () => {
       mobileNav.classList.toggle('active')
       burger.classList.toggle('active')
+      document.body.style.overflow = 'hidden'
     })
 
     // Закрытие мобильного меню по кнопке закрытия
