@@ -10,6 +10,56 @@
   }
 }
 
+.herohome {
+  .container {
+    &::before {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      width: 560px;
+      height: 640px;
+      background: url('../../assets/images/hero-bg.png') center no-repeat;
+      background-size: cover;
+      bottom: 0;
+      right: -100px;
+      z-index: -1;
+      transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
+
+      @include tablet {
+        background: url('../../assets/images/hero-bg.png') bottom center no-repeat;
+        background-size: contain !important;
+        height: 100%;
+        width: 40vw !important;
+      }
+
+      @include tablet2 {
+        background: url('../../assets/images/hero-bg.png') bottom center no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 50vw;
+      }
+
+      @include screen1170 {
+        background: url('../../assets/images/hero-bg.png') bottom right no-repeat;
+        width: 100%;
+        right: 0;
+        background-size: 400px;
+        opacity: 1;
+      }
+
+      @include wide {
+        right: 0;
+      }
+
+      @include mobile {
+        width: 100% !important;
+        background-position: bottom center !important;
+        background-size: 63vw !important;
+      }
+    }
+  }
+}
+
 .hero {
   background: #EBF0FC;
   color: $color-text;
@@ -74,51 +124,7 @@
       }
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      pointer-events: none;
-      width: 560px;
-      height: 640px;
-      background: url('../../assets/images/hero-bg.png') center no-repeat;
-      background-size: cover;
-      bottom: 0;
-      right: -100px;
-      z-index: -1;
-      transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
 
-      @include tablet {
-        background: url('../../assets/images/hero-bg.png') bottom center no-repeat;
-        background-size: contain !important;
-        height: 100%;
-        width: 40vw !important;
-      }
-
-      @include tablet2 {
-        background: url('../../assets/images/hero-bg.png') bottom center no-repeat;
-        background-size: contain;
-        height: 100%;
-        width: 50vw;
-      }
-
-      @include screen1170 {
-        background: url('../../assets/images/hero-bg.png') bottom right no-repeat;
-        width: 100%;
-        right: 0;
-        background-size: 400px;
-        opacity: 1;
-      }
-
-      @include wide {
-        right: 0;
-      }
-
-      @include mobile {
-        width: 100% !important;
-        background-position: bottom center !important;
-        background-size: 63vw !important;
-      }
-    }
   }
 
   @include tablet {
@@ -292,6 +298,7 @@
     color: $color-bg !important;
     z-index: 1;
     overflow: hidden;
+    user-select: none;
 
     @include mobile {
       padding: 1.25rem;

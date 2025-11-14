@@ -22,6 +22,7 @@ window.addEventListener('load', function () {
       ScrollVisibility.removeElement('.heroabout', 'animate-hero')
       ScrollVisibility.removeElement('.heroreviews', 'animate-hero')
       ScrollVisibility.removeElement('.herocontacts', 'animate-hero')
+      ScrollVisibility.removeElement('.herousluga', 'animate-hero')
 
       Fancybox.bind('[data-fancybox]', {})
 
@@ -598,4 +599,32 @@ class Modal {
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
   window.modalManager = new Modal()
+})
+
+// FAQ accordion functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq__item')
+
+  faqItems.forEach(item => {
+    const header = item.querySelector('.faq__header')
+
+    header.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active')
+      const iconText = item.querySelector('.faq__icon p')
+
+      // Закрыть все открытые элементы
+      faqItems.forEach(i => {
+        i.classList.remove('active')
+        i.querySelector('.faq__icon p').textContent = 'Развернуть'
+      })
+
+      // Если текущий элемент был закрыт, открыть его
+      if (!isOpen) {
+        item.classList.add('active')
+        iconText.textContent = 'Свернуть'
+      } else {
+        iconText.textContent = 'Развернуть'
+      }
+    })
+  })
 })
