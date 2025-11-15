@@ -7,6 +7,10 @@
   &.animate-hero {
     background-position-x: 25vw;
     opacity: 0;
+
+    @include mobile {
+      background-position: 80% 100%;
+    }
   }
 
   &::after {
